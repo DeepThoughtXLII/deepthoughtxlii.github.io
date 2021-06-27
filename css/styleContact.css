@@ -1,0 +1,61 @@
+/*  the header TABEA VAN HASZ */
+header {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    color: #2D3047;
+}
+
+
+/*  unordered list in the nav bar */
+nav ul { 
+
+    list-style-type: none;
+    margin: 30px;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+
+}
+
+
+/*  list components in the list inside nav bar */
+nav ul li a{
+    font-family: 'Lucida Sans Unicode';
+    border-width: 0px;
+    color: #2D3047;
+    text-align: center;
+    padding: 12px 80px;
+
+    text-decoration: none;
+}
+
+nav ul li a.selected{
+    background-color: #6A71A0;
+    color: #FFA585;
+}
+
+nav ul li a:hover {
+    background-color: #FF7847;
+    color: #2D3047;
+}
+
+
+hr{
+
+    border: 0;
+    border-top: 4px solid #FF7847;
+    border-bottom: 2px dashed #FF7847;
+
+    height: 3px;
+}
+
+
+
+/*   */
+body { 
+    background-color: #FFA585;
+}
