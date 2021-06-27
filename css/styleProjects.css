@@ -1,9 +1,52 @@
 /*  the header TABEA VAN HASZ */
 header {
+   
     font-family: 'Anton', sans-serif;
-    text-align: center;
+   
     font-size: 22px;
     color: #2D3047;
+}
+
+h1{
+    text-align: center;
+   
+}
+
+header div {
+    right: 0px;
+   position: absolute;
+  margin-right: 15vw;
+}
+
+
+.fa{
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    background: #FF7847;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-github {
+    background: black;
+    color: white;
+}
+
+.fa-instagram {
+    background: #C13584;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #0077B5;
+    color: white;
 }
 
 
