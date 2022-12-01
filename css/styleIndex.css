@@ -1,7 +1,25 @@
 
+/* ___________________________________________________________________________________________________________________________________
+                                                           GRID
+ _______________________________________________________________________________________________________________________________________*/
+
+    .nav{grid-area: sideBar;}
+    .intro{grid-area: intro;}
+    .pro{grid-area: projects;}
+
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        'sideBar intro'
+        'sideBar projects';
+        gap: 20px;
+    }
 
 
-/*  the header TABEA VAN HASZ */
+
+/* ___________________________________________________________________________________________________________________________________
+                                                            the header TABEA VAN HASZ 
+ _______________________________________________________________________________________________________________________________________*/
 header {
    
     font-family: 'Anton', sans-serif;
@@ -20,7 +38,6 @@ header div {
    position: absolute;
   margin-right: 15vw;
 }
-
 
 .fa{
     padding: 10px;
@@ -51,6 +68,15 @@ header div {
     background: #0077B5;
     color: white;
 }
+
+
+/* ___________________________________________________________________________________________________________________________________
+                                                            TOP NAV 
+ _______________________________________________________________________________________________________________________________________*/
+
+
+
+
 
 /*  unordered list in the nav bar */
 nav ul { 
@@ -100,7 +126,64 @@ hr{
 
 
 
-/*   */
+
+
+/* ___________________________________________________________________________________________________________________________________
+                                                            SIDE NAV 
+ _______________________________________________________________________________________________________________________________________*/
+
+
+
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: sticky;
+    z-index: 1;
+    margin-left: 120px;
+    background-color:#FFA585;
+    overflow-x: hidden;
+  }
+  
+.nav{
+    position: absolute;
+
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+  .sidenav a {
+    font-family: 'Lucida Sans Unicode';
+    padding: 30px 8px 30px 16px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    color:#2D3047;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    background-color: #FF7847;
+    color: #2D3047;
+  }
+
+  .sidenav a.selected{
+    background-color: #6A71A0;
+    color: #FFA585;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+ 
+
+/* ___________________________________________________________________________________________________________________________________
+                                                            INTRO
+ _______________________________________________________________________________________________________________________________________*/
+
+
+
 body { 
     background-color: #FFA585;
 }
@@ -111,29 +194,32 @@ body h2{
     font-size: 60px;
 }
 
-body> div{
-    margin: 7vw 20vw;
+
+.introduction{
+    margin: 2vw 20vw 0vw;
     padding: 40px  60px;
     background-color:  #6A71A0;
     color: #FFA585;
 }
 
-body > div >p{
+ 
+.introduction > p{
     font-family: 'Lucida Sans Unicode';
     font-size: 20px;
     line-height: 30px;
 }
 
-body div p:last-child{
+
+.introduction p:last-child{
     clear: auto;
 }
 
-body > div > img{
+.introduction > img{
     float: left;
     padding-right: 40px;
     padding-bottom: 25px;
     max-height: 300px;
-    max-width 300px;
+    max-width: 300px;
 
 }
 
