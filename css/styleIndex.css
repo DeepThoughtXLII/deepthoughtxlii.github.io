@@ -1,45 +1,204 @@
+/* ___________________________________________________________________________________________________________________________________
+                                                           COLORS
+ _______________________________________________________________________________________________________________________________________*/
+
+:root {
+    --pink: #FFA585;
+    --red: #FF7847;
+    --blue: #6A71A0;
+    --darkBlue: #2D3047;
+
+    --purple: #890cd6;
+    --yellow: #e0bf00;
+    --green: #48b850;
+    --neonPink: #b654a9;
+    --strongRed: #ff1b1b;
+    --orange: #ff9933;
+    --lightBlue: #57c2ff;
+}
+
+
+
+
 
 /* ___________________________________________________________________________________________________________________________________
                                                            GRID
  _______________________________________________________________________________________________________________________________________*/
 
-    .nav{grid-area: sideBar;}
-    .intro{grid-area: intro;}
-    .pro{grid-area: projects;}
+.sidenav {
+    grid-area: sideBar;
+}
 
-    .grid-container{
-        display: grid;
-        grid-template-areas: 
+.intro {
+    grid-area: intro;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
         'sideBar intro'
-        'sideBar projects';
-        gap: 20px;
-    }
+        'sideBar projects'
+        'sideBar contact';
+
+}
 
 
+
+
+.projectBubble {
+    display: grid;
+    grid-template-areas:
+        'passGas heavensFall treasure'
+        'uwu zoo deltaStar';
+    gap: 25px;
+    padding: 2vw 2vw;
+}
+
+.grid-container h1 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 3vw;
+    color: #2D3047;
+}
+
+.projectBubble div {
+    background-color: var(--blue);
+    padding: 30px;
+    width: 20vw;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.projectBubble .tag {
+    padding: 0.5vw;
+    box-sizing: border-box;
+}
+
+.tag .progLang{
+    background-color: var(--purple);
+}
+
+.tag .misc{
+    background-color: var(--neonPink);
+}
+
+.tag .engine{
+    background-color: var(--yellow);
+
+}
+
+.tag .time{
+    background-color: var(--green);
+
+}
+
+.tag .team{
+    background-color: var(--orange);
+}
+
+.tag .state{
+    background-color: var(--strongRed);
+}
+
+.tag .date{
+    background-color: var(--lightBlue);
+
+}
+
+.projectBubble .tag span {
+    font-family: 'Lucida Sans Unicode';
+}
+
+.tag span {
+    color: #fff;
+    background-color: #9c27b0;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 0.3vw;
+    display: inline-block;
+    
+}
+
+.projectBubble div img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.projectBubble div h2 {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 2vw;
+    color: var(--pink);
+}
+
+.deltaStar {
+    grid-area: deltaStar;
+
+}
+
+.hpUwU {
+    grid-area: uwu;
+
+}
+
+.treasureHunt {
+    grid-area: treasure;
+
+}
+
+.passTheGas {
+    grid-area: passGas;
+}
+
+.heavensFall {
+    grid-area: heavensFall;
+
+}
+
+.Zoo{
+grid-area: zoo;
+}
+
+.PT {
+    grid-area: pt;
+
+}
 
 /* ___________________________________________________________________________________________________________________________________
                                                             the header TABEA VAN HASZ 
  _______________________________________________________________________________________________________________________________________*/
 header {
-   
+
     font-family: 'Anton', sans-serif;
-   
-    font-size: 22px;
-    color: #2D3047;
+    background-color: var(--blue);
+    font-size: 2vw;
+    color: var(--pink);
+    margin: 0;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    width: 100%;
 }
 
-h1{
+h1 {
     text-align: center;
-   
+
 }
 
 header div {
     right: 0px;
-   position: absolute;
-  margin-right: 15vw;
+    position: absolute;
+    margin-right: 15vw;
+    margin-top: 3.75vw;
 }
 
-.fa{
+.fa {
     padding: 10px;
     text-decoration: none;
     margin: 5px 2px;
@@ -79,7 +238,7 @@ header div {
 
 
 /*  unordered list in the nav bar */
-nav ul { 
+nav ul {
 
     list-style-type: none;
     margin: 30px;
@@ -87,14 +246,14 @@ nav ul {
     text-align: center;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
 
 }
 
 
 /*  list components in the list inside nav bar */
-nav ul li a{
+nav ul li a {
     font-family: 'Lucida Sans Unicode';
     border-width: 0px;
     color: #2D3047;
@@ -104,7 +263,7 @@ nav ul li a{
     text-decoration: none;
 }
 
-nav ul li a.selected{
+nav ul li a.selected {
     background-color: #6A71A0;
     color: #FFA585;
 }
@@ -115,7 +274,7 @@ nav ul li a:hover {
 }
 
 
-hr{
+hr {
 
     border: 0;
     border-top: 4px solid #FF7847;
@@ -134,49 +293,61 @@ hr{
 
 
 
-  .sidenav {
+.sidenav {
     height: 100%;
-    width: 160px;
-    position: sticky;
-    z-index: 1;
-    margin-left: 120px;
-    background-color:#FFA585;
-    overflow-x: hidden;
-  }
-  
-.nav{
-    position: absolute;
 
-    top: 50%;
-    transform: translate(0, -50%);
+
+    z-index: 1;
+    border-width: 20px;
+
+    border-left: 2px dashed var(--red);
+    border-right: 2px dashed var(--red);
 }
 
-  .sidenav a {
-    font-family: 'Lucida Sans Unicode';
-    padding: 30px 8px 30px 16px;
+.sidenav div {
+    position: sticky;
+
+    top: 0;
+}
+
+.sidenav button {
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    padding: 5vw 9vw;
     text-decoration: none;
     text-align: center;
-    font-size: 25px;
-    color:#2D3047;
+    font-size: 1.5vw;
+    color: #2D3047;
     display: block;
-  }
-  
-  .sidenav a:hover {
+    border: none;
+    background-color: var(--pink);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.sidenav button p {
+    text-align: center;
+
+}
+
+.sidenav button:hover {
     background-color: #FF7847;
     color: #2D3047;
-  }
+}
 
-  .sidenav a.selected{
+.sidenav button.selected {
     background-color: #6A71A0;
     color: #FFA585;
-  }
-  
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
+}
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
     padding: 0px 10px;
-  }
- 
+}
+
 
 /* ___________________________________________________________________________________________________________________________________
                                                             INTRO
@@ -184,37 +355,37 @@ hr{
 
 
 
-body { 
+body {
     background-color: #FFA585;
 }
 
-body h2{
+body h2 {
     font-family: 'Anton', sans-serif;
-    margin:0px;
+    margin: 0px;
     font-size: 60px;
 }
 
 
-.introduction{
-    margin: 2vw 20vw 0vw;
-    padding: 40px  60px;
-    background-color:  #6A71A0;
+
+.introduction {
+    margin: 4vw;
+    padding: 40px 60px;
+    background-color: #6A71A0;
     color: #FFA585;
 }
 
- 
-.introduction > p{
+.introduction>p {
     font-family: 'Lucida Sans Unicode';
-    font-size: 20px;
+    font-size: auto;
     line-height: 30px;
 }
 
 
-.introduction p:last-child{
+.introduction p:last-child {
     clear: auto;
 }
 
-.introduction > img{
+.introduction>img {
     float: left;
     padding-right: 40px;
     padding-bottom: 25px;
@@ -222,4 +393,3 @@ body h2{
     max-width: 300px;
 
 }
-

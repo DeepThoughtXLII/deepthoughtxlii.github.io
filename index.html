@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Tabea van Hasz Game Programmer</title>
+    <link rel="stylesheet" href="css/styleIndex.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-        <title>Tabea van Hasz Game Programmer</title>
-        <link rel="stylesheet" href="css/styleIndex.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    </head>
-
-
-    <header>
-<div>  <a href="https://www.instagram.com/acrylicgames/" class="fa fa-instagram"></a>
-            <a href="https://twitter.com/Evylin0" class="fa fa-twitter"></a>
-            <a href="https://www.linkedin.com/in/tabea-van-hasz-1499431a5/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/DeepThoughtXLII" class="fa fa-github"></a></div>
-        
-
-        <h1>Tabea van Hasz</h1>
+</head>
 
 
+<header>
+    <div> <a href="https://www.instagram.com/acrylicgames/" class="fa fa-instagram"></a>
+        <a href="https://twitter.com/Evylin0" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/tabea-van-hasz-1499431a5/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/DeepThoughtXLII" class="fa fa-github"></a>
+    </div>
 
 
-    </header>
+    <h1>Tabea van Hasz</h1>
+
+
+
+
+</header>
 
 <!--
     <nav>
@@ -40,43 +41,254 @@
 
 -->
 
-    <hr>
+<hr>
 
 
-    <body>
+<body>
 
 
-        <div class="grid-container">
-            <div class="nav">        
-                <div class="sidenav">
-                    <a href="#about">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
-                </div>
+    <div class="grid-container">
+
+        <section class="sidenav">
+            <div>
+                <button type="button" onclick='document.getElementById("intro").scrollIntoView()'>
+                    <p> About</p>                   
+                </button>
+                <button type="button" onclick='document.getElementById("projects").scrollIntoView()'>
+                    <p> Projects</p>      
+                </button>
+                <button type="button" onclick='document.getElementById("contact").scrollIntoView()'>
+                    <p> Contact</p>      
+                </button>
             </div>
-            <div class="intro">
-                <div class="introduction">
-                    <img  src="img/WhatsApp Image 2022-11-30 at 22.20.00.jpg" alt="profile picture">
-        
-                    <h2>Hello.</h2>
-        
-                    <p>I am currently doing my minor (Game Lab) at OAMK in Oulu, Finland as part of my study Creative Media and Game Technologies in the Engineering track in order to become a Game Programmer. 
-                    </p>
-        
-                    <p>Since I was a kid I have always been fascinated by Games and the way they tell stories and when I finally encountered the wonders of coding in my 7th Grade Computer Science elective I started to dream of making games myself.</p>
-        
-                    <p>Now I am working hard to make that dream come true and doing my best to learn a lot and gather as much experience as I can.</p>
-                </div>
+        </section>
+
+        <div id="intro" class="intro">
+            <h1>ABOUT</h1>
+            <div class="introduction">
+                <img src="img/WhatsApp Image 2022-11-30 at 22.20.00.jpg" alt="profile picture">
+
+                <h2>Hello.</h2>
+
+                <p>I am currently doing my minor (Game Lab) at OAMK in Oulu, Finland as part of my study Creative
+                    Media
+                    and Game Technologies in the Engineering track in order to become a Game Programmer.
+                </p>
+
+                <p>Since I was a kid I have always been fascinated by Games and the way they tell stories and when I
+                    finally encountered the wonders of coding in my 7th Grade Computer Science elective I started to
+                    dream of making games myself.</p>
+
+                <p>Now I am working hard to make that dream come true and doing my best to learn a lot and gather as
+                    much experience as I can.</p>
             </div>
-            <div class="pro">Projects</div>  
-          </div>
+            <hr>
+        </div>
+
+    
+        <div id="projects" class="projects">
+            <h1>PROJECTS</h1>
+            <div  class="projectBubble">
+                <div class="deltaStar">
+                    <h2>DELTASTAR</h2>
+                    <img src="img/deltaStar.jpg" alt="deltaStar">
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Fall 2019
+                        </span>
+                        <span class="misc">
+                            Arcade
+                        </span>
+                        <span class="misc">
+                            Bullet Hell
+                        </span>
+                        <span class="engine">
+                            GXP Engine
+                        </span>
+                        <span class="time">
+                            2 weeks
+                        </span>
+                        <span class="team">
+                            2x artists, 1x designer, 1 programmer
+                        </span>
+                    </div>
+                </div>
+                <div class="hpUwU">
+                    <h2>HP UWU</h2>
+                    <img src="img/huwu.jpg" alt="hpbutuwu">
+                    <div class="tag">
+                        <span class="progLang">
+                            C++
+                        </span>
+                        <span class="date">
+                            Fall 2021
+                        </span>
+                        <span class="misc">
+                            Turn-based comabt
+                        </span>
+                        <span class="engine">
+                            no engine/sfml
+                        </span>
+                        <span class="time">
+                            3 days
+                        </span>
+                        <span class="team">
+                            solo
+                        </span>
+                    </div>
+                </div>
+                <div class="treasureHunt">
+                    <h2>ENSCHEDE LOST CHAPTER</h2>
+                    <img src="img/gps.jpg" alt="treasureHunt">
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Spring 2020
+                        </span>
+                        <span class="misc">
+                            AR GPS Mobile App
+                        </span>
+                        <span class="engine">
+                            Unity
+                        </span>
+                        <span class="time">
+                            3 weeks
+                        </span>
+                        <span class="team">
+                            3x artists, 2x designer, 2x programmers
+                        </span>
+                    </div>
+                </div>
+                <div class="passTheGas">
+                    <h2>PASS THE GAS</h2>
+                    <img src="img/spug.png" alt="spug">
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Fall 2022
+                        </span>
+                        <span class="misc">
+                            Mobile Idle Tycoon
+                        </span>
+                        <span class="engine">
+                            Unity
+                        </span>
+                        <span class="time">
+                            3 months
+                        </span>
+                        <span class="team">
+                            3x artists, 3x programmer
+                        </span>
+                        <span class="state">
+                            released on Google Play
+                        </span>
+                    </div>
+                </div>
+                <div class="heavensFall">
+                    <h2>HEAVENFALL</h2>
+                    <img src="img/Heavensfall.jpg" alt="heavensFall">
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Summer 2022
+                        </span>
+                        <span class="misc">
+                            Mobile Networking Controllers
+                        </span>
+                        <span class="misc">
+                           4 Player Multiplayer
+                        </span>
+                        <span class="misc">
+                            top-down co-op shooter
+                         </span>
+                        <span class="engine">
+                            Unity
+                        </span>
+                        <span class="time">
+                            8 weeks
+                        </span>
+                        <span class="team">
+                            3x artists, 2x designer, 2x programmer
+                        </span>
+                    </div>
+                </div>
+                <div class="PN">
+                    <h2>PN</h2>
+                    <img src="img/PN.jpg" alt="playable nightmare">
+                    <div class="tag">
+                        <span class="progLang">
+                            Java
+                        </span>
+                        <span class="date">
+                            Spring 2019
+                        </span>
+                        <span class="misc">
+                            Point&Click Horror
+                        </span>
+                        <span class="engine">
+                            Processing
+                        </span>
+                        <span class="time">
+                            2 weeks
+                        </span>
+                        <span class="team">
+                            2x artists, 2x designer, 1 programmer
+                        </span>
+                    </div>
+                </div>
+                <div class="Zoo">
+                    <h2>Zoo Adventure</h2>
+                    <img src="img/zooAdventure.jpg" alt="zoo">
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Summer 2020
+                        </span>
+                        <span class="misc">
+                            Virtual Zoo Experience
+                        </span>
+                        <span class="engine">
+                            Gxp Engine
+                        </span>
+                        <span class="time">
+                            2 weeks
+                        </span>
+                        <span class="team">
+                            2x artists, 1x designer, 1 programmer
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+
+        <div id="contact" class="contact">
+            <h1>CONTACT</h1>
+        </div>
+
+    </div>
 
 
 
 
+    
+       
 
 
-        
 
-    </body>
+
+</body>
+
 </html>
