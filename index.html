@@ -91,7 +91,10 @@
             <div  class="projectBubble">
                 <div class="deltaStar">
                     <h2>DELTASTAR</h2>
-                    <img src="img/deltaStar.jpg" alt="deltaStar">
+                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
+                        <img src="img/deltaStar.jpg" alt="deltaStar">
+                        <p>MORE</p>
+                    </div>
                     <div class="tag">
                         <span class="progLang">
                             C#
@@ -118,7 +121,10 @@
                 </div>
                 <div class="hpUwU">
                     <h2>HP UWU</h2>
-                    <img src="img/huwu.jpg" alt="hpbutuwu">
+                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
+                        <img src="img/huwu.jpg" alt="hpbutuwu">
+                        <p>MORE</p>
+                    </div>
                     <div class="tag">
                         <span class="progLang">
                             C++
@@ -142,7 +148,10 @@
                 </div>
                 <div class="treasureHunt">
                     <h2>ENSCHEDE LOST CHAPTER</h2>
-                    <img src="img/gps.jpg" alt="treasureHunt">
+                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
+                        <img src="img/gps.jpg" alt="treasureHunt">
+                        <p>MORE</p>
+                    </div>
                     <div class="tag">
                         <span class="progLang">
                             C#
@@ -164,9 +173,12 @@
                         </span>
                     </div>
                 </div>
-                <div class="passTheGas">
+                <div id="passthegas" class="passTheGas">
                     <h2>PASS THE GAS</h2>
-                    <img src="img/spug.png" alt="spug">
+                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onmouseclick='expandProject("passthegas")'>
+                        <img src="img/spug.png" alt="spug">
+                        <p>MORE</p>
+                    </div>
                     <div class="tag">
                         <span class="progLang">
                             C#
@@ -193,7 +205,10 @@
                 </div>
                 <div class="heavensFall">
                     <h2>HEAVENFALL</h2>
-                    <img src="img/Heavensfall.jpg" alt="heavensFall">
+                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
+                        <img src="img/Heavensfall.jpg" alt="heavensFall">
+                        <p>MORE</p>
+                    </div>                    
                     <div class="tag">
                         <span class="progLang">
                             C#
@@ -223,7 +238,10 @@
                 </div>
                 <div class="PN">
                     <h2>PN</h2>
-                    <img src="img/PN.jpg" alt="playable nightmare">
+                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
+                        <img src="img/PN.jpg" alt="playable nightmare">
+                        <p>MORE</p>
+                    </div>
                     <div class="tag">
                         <span class="progLang">
                             Java
@@ -247,7 +265,10 @@
                 </div>
                 <div class="Zoo">
                     <h2>Zoo Adventure</h2>
-                    <img src="img/zooAdventure.jpg" alt="zoo">
+                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
+                        <img src="img/zooAdventure.jpg" alt="zoo">
+                        <p>MORE</p>
+                    </div>
                     <div class="tag">
                         <span class="progLang">
                             C#
@@ -274,6 +295,11 @@
             <hr>
         </div>
 
+        <div id="projectsExpand" class="projectsExpand">
+            <h1>PASS THE GAS</h1>
+
+        </div>
+
         <div id="contact" class="contact">
             <h1>CONTACT</h1>
         </div>
@@ -292,3 +318,36 @@
 </body>
 
 </html>
+
+
+<script>
+
+    function elementVisibility(id)
+    {
+        var element = document.getElementById(id);
+        if(element.classList.contains("moreModeOn")){
+            element.classList.remove("moreModeOn");
+            element.classList.add("moreModeOff");
+        }else{
+            element.classList.remove("moreModeOff");
+            element.classList.add("moreModeOn");
+        }
+    }
+
+    function toggleMoreMode(element)
+    {
+        if(element.classList.contains("moreModeOn")){
+            element.classList.remove("moreModeOn");
+            element.classList.add("moreModeOff");
+        }else{
+            element.classList.remove("moreModeOff");
+            element.classList.add("moreModeOn");
+        }
+    }
+
+    function expandProject(divname){
+        var div = document.getElementById(divname);
+        div.classList.add("projectExpanded");
+    }
+
+</script>

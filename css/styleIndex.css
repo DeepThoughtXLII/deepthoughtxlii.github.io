@@ -37,11 +37,16 @@
     grid-area: projects;
 }
 
+.projectsExpand{
+    grid-area: projectsExpand;
+}
+
 .grid-container {
     display: grid;
     grid-template-areas:
         'sideBar intro'
         'sideBar projects'
+        'sideBar projectsExpand'
         'sideBar contact';
 
 }
@@ -56,6 +61,11 @@
         'uwu zoo deltaStar';
     gap: 25px;
     padding: 2vw 2vw;
+}
+
+.projectExpanded{
+    width: 100%;
+    color:#ff1b1b;
 }
 
 .grid-container h1 {
@@ -78,33 +88,33 @@
     box-sizing: border-box;
 }
 
-.tag .progLang{
+.tag .progLang {
     background-color: var(--purple);
 }
 
-.tag .misc{
+.tag .misc {
     background-color: var(--neonPink);
 }
 
-.tag .engine{
+.tag .engine {
     background-color: var(--yellow);
 
 }
 
-.tag .time{
+.tag .time {
     background-color: var(--green);
 
 }
 
-.tag .team{
+.tag .team {
     background-color: var(--orange);
 }
 
-.tag .state{
+.tag .state {
     background-color: var(--strongRed);
 }
 
-.tag .date{
+.tag .date {
     background-color: var(--lightBlue);
 
 }
@@ -121,7 +131,13 @@
     border-radius: 8px;
     margin-top: 0.3vw;
     display: inline-block;
-    
+
+}
+
+.projectBubble .projectMore{
+    padding: 0px;
+    text-align: center;
+    position: relative;
 }
 
 .projectBubble div img {
@@ -129,6 +145,35 @@
     height: 70%;
     object-fit: cover;
     overflow: hidden;
+}
+
+
+
+.projectBubble div p{
+    font-family: 'Anton', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size: 3vw;
+    margin:0px;
+}
+
+.projectBubble .moreModeOn p{
+    visibility: visible;
+}
+
+.projectBubble .moreModeOff p{
+    visibility: hidden;
+}
+
+.projectBubble .moreModeOn img{
+    filter: grayscale(100%) opacity(75%);
+}
+
+.projectBubble .moreModeOff img{
+    filter:inherit;
 }
 
 .projectBubble div h2 {
@@ -162,8 +207,8 @@
 
 }
 
-.Zoo{
-grid-area: zoo;
+.Zoo {
+    grid-area: zoo;
 }
 
 .PT {
