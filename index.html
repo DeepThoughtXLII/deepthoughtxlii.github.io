@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Tabea van Hasz Game Programmer</title>
     <link rel="stylesheet" href="css/styleIndex.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+
 
 </head>
 
@@ -70,9 +71,8 @@
 
                 <h2>Hello.</h2>
 
-                <p>I am currently doing my minor (Game Lab) at OAMK in Oulu, Finland as part of my study Creative
-                    Media
-                    and Game Technologies in the Engineering track in order to become a Game Programmer.
+                <p>I just finished my minor in Game Lab at OAMK in Oulu, Finland as part of my study Creative
+                    Media and Game Technologies in the Engineering track in order to become a Game Programmer.
                 </p>
 
                 <p>Since I was a kid I have always been fascinated by Games and the way they tell stories and when I
@@ -88,97 +88,17 @@
     
         <div id="projects" class="projects">
             <h1>PROJECTS</h1>
-            <div  class="projectBubble">
-                <div class="deltaStar">
-                    <h2>DELTASTAR</h2>
-                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
-                        <img src="img/deltaStar.jpg" alt="deltaStar">
-                        <p>MORE</p>
-                    </div>
-                    <div class="tag">
-                        <span class="progLang">
-                            C#
-                        </span>
-                        <span class="date">
-                            Fall 2019
-                        </span>
-                        <span class="misc">
-                            Arcade
-                        </span>
-                        <span class="misc">
-                            Bullet Hell
-                        </span>
-                        <span class="engine">
-                            GXP Engine
-                        </span>
-                        <span class="time">
-                            2 weeks
-                        </span>
-                        <span class="team">
-                            2x artists, 1x designer, 1 programmer
-                        </span>
-                    </div>
-                </div>
-                <div class="hpUwU">
-                    <h2>HP UWU</h2>
-                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
-                        <img src="img/huwu.jpg" alt="hpbutuwu">
-                        <p>MORE</p>
-                    </div>
-                    <div class="tag">
-                        <span class="progLang">
-                            C++
-                        </span>
-                        <span class="date">
-                            Fall 2021
-                        </span>
-                        <span class="misc">
-                            Turn-based comabt
-                        </span>
-                        <span class="engine">
-                            no engine/sfml
-                        </span>
-                        <span class="time">
-                            3 days
-                        </span>
-                        <span class="team">
-                            solo
-                        </span>
-                    </div>
-                </div>
-                <div class="treasureHunt">
-                    <h2>ENSCHEDE LOST CHAPTER</h2>
-                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
-                        <img src="img/gps.jpg" alt="treasureHunt">
-                        <p>MORE</p>
-                    </div>
-                    <div class="tag">
-                        <span class="progLang">
-                            C#
-                        </span>
-                        <span class="date">
-                            Spring 2020
-                        </span>
-                        <span class="misc">
-                            AR GPS Mobile App
-                        </span>
-                        <span class="engine">
-                            Unity
-                        </span>
-                        <span class="time">
-                            3 weeks
-                        </span>
-                        <span class="team">
-                            3x artists, 2x designer, 2x programmers
-                        </span>
-                    </div>
-                </div>
-                <div id="passthegas" class="passTheGas">
-                    <h2>PASS THE GAS</h2>
-                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onmouseclick='expandProject("passthegas")'>
+            <ul  class="projectBubble">
+                <li id="passthegas" class="projectItem project-item-collapsed">
+                    <h2>PASS THE GAS</h2>        
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'  onclick='expandProject("testGridExpand", "passthegas")'>
                         <img src="img/spug.png" alt="spug">
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/passthegas.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <p>MORE</p>
-                    </div>
+                    </button>                   
                     <div class="tag">
                         <span class="progLang">
                             C#
@@ -202,13 +122,31 @@
                             released on Google Play
                         </span>
                     </div>
-                </div>
-                <div class="heavensFall">
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand">
+                    <p>Pass The Gas is an mobile game and an Idle-Tycoon with the objective of building and managing your own Space Gas Station. 
+                        The Player can build and upgrade structures and gather special resources in a small risk/reward game that we called "Space Expeditions".
+                    </p>
+                    <br>
+                    <p>It was a project I worked on with a group of 7 people during my minor abroad in Finland. 
+                        I was mainly responsible for the <mark>behaviour of the aliens</mark>, walking around and generating income,
+                         for everything that had to with the <mark>different buildings and their individual functions</mark> and the <mark>upgrade system</mark>.
+                          I also did work on <mark>integrating the UI</mark> into the game together with another developer 
+                        and took care of <mark>connecting the Main Island with the Space Expedition</mark>. Aside from that I did some <mark>basic events with firebase</mark> and helped where I could when smaller Issues happened elsewhere
+                    and took part in discussing gameplay changes, planning testing sessions and documenting the development progress.</p>
+                   <br>
+                    <p>At this point Pass The Gas is released on Play Store and we are planning on continuing development the best we can next to our own projects/studies.</p>
+                    <a  class="button" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.LuckyLanternStudios.PasstheGas"> 
+                       <i class="fa fa-google-play"></i>PASS THE GAS on Playstore
+                    </a>
+                </li>
+                <li id="heavensfall" class="projectItem project-item-collapsed">
                     <h2>HEAVENFALL</h2>
-                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onclick='expandProject("testGridExpand2", "heavensfall")'>
                         <img src="img/Heavensfall.jpg" alt="heavensFall">
-                        <p>MORE</p>
-                    </div>                    
+                        
+                        <p>MORE</p>   
+                    </button>                 
                     <div class="tag">
                         <span class="progLang">
                             C#
@@ -235,13 +173,229 @@
                             3x artists, 2x designer, 2x programmer
                         </span>
                     </div>
-                </div>
-                <div class="PN">
-                    <h2>PN</h2>
-                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
-                        <img src="img/PN.jpg" alt="playable nightmare">
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand2">
+                    <p>Heavensfall is a short 2-4 player auto-aim shooter in which players must survive multiple waves of enemies together. Every enemy killed, awards XP and after certain milestones of XP gained, Players level up.
+                        A hidden objective of the game is to try to keep the levels of all players more or less even, since any player that kills disproportionally more enemies than their allies
+                        becomes corrupted by their deeds and must now be defeated by their former friends.</p>
+                    <br>
+                    <p>It was a game I worked on with 5 other people for a multiplayer game festival. The thought was to create a game that was short, 
+                        easy to pick up for players of all ages and experience levels and still fun for everyone. In order to not have any troubles with keeping track of
+                        controllers during the festival, we made it possible for players to scan a QR code and join the game over websockets, using their phones as controllers.
+                    </p>
+                    <br>
+                    <p>During the 8 weeks of development I was responsible for the <mark>networking of the web controllers</mark> and in general making the <mark>multiplayer aspect</mark> work properly.
+                        I also worked on <mark>player levels and XP</mark>, the <mark>gameplay loop</mark> with different endings, <mark>in unity</mark>, 
+                        making the <mark> 3D environment work with the 2D characters on the camera</mark>, the <mark>final boss fight<mark> and on solving various bugs that came up during development.
+                    </p>
+                </li>
+                <li id="hpuwu" class="projectItem project-item-collapsed">
+                    <h2>HP UWU</h2>
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onclick='expandProject("testGridExpand3", "hpuwu")'>
+                        <img src="img/huwu.jpg" alt="hpbutuwu">
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/harryPotterButUwu.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                         <p>MORE</p>
+                    </button>
+                    <div class="tag">
+                        <span class="progLang">
+                            C++
+                        </span>
+                        <span class="date">
+                            Fall 2021
+                        </span>
+                        <span class="misc">
+                            Turn-based comabt
+                        </span>
+                        <span class="engine">
+                            no engine/sfml
+                        </span>
+                        <span class="time">
+                            3 days
+                        </span>
+                        <span class="team">
+                            solo
+                        </span>
                     </div>
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand3">
+                    <p>HP but UWU is a small project that was born from an assignment that I had to complete for a C++ course. 
+                        The task was to create a simplefied round-based combat game similar to pokemon with just C++ and the SFML library.
+                        I had some pixel art that I had done quickly a while ago and just decided to make use of it for this assignment.</p>
+                    <br>
+                    <p>The gameplay is pretty simple. You choose one of three characters and then you fight Voldemort(but uwu). You take alternating turns choosing
+                        an action every turn. You have options to Attack(doing damage), Recover(50% to recover HP), Prepare(take less damage next turn) or Cast Magic(do sanity damage).
+                        Voldemort(but uwu) will complete a random action every turn with a small chance to do nothing. All actions can be checked in the action log and 
+                        every time Voldemort(but uwu) dies, he reaches a new form and the player gains 100 points. When the Player dies, the score gets logged into teh highscore file.
+                    </p>
+                    <br>
+                    <p>I had a lot of fun with this small project and especially working with C++ was nice. I hadn't done anything in C++ before
+                        so it was certainly different, but I enjoyed it immensely once I got immersed in it. I have continued working on the project,
+                        now and then just for fun and I still have plans to add small animations and sounds as well as add something for players
+                        to input their own names into the highscore file. I have also long been considering a way to progress the character when defeating an enemy.
+                        And adding more opponents instead of different versions of Voldemort(but uwu).
+                    </p>
+                    <a  class="button" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.LuckyLanternStudios.PasstheGas"> 
+                        <i class="fa fa-github"></i>HP (but uwu) on Github
+                     </a>
+                </li>
+                <li id="lostchapter" class="projectItem project-item-collapsed">
+                    <h2>ENSCHEDE LOST CHAPTER</h2>
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onclick='expandProject("testGridExpand4", "lostchapter")'>
+                        <img src="img/gps.jpg" alt="treasureHunt">
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/enschedeLostChapter.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>MORE</p>
+                    </button>
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Spring 2021
+                        </span>
+                        <span class="misc">
+                            AR GPS Mobile App
+                        </span>
+                        <span class="engine">
+                            Unity
+                        </span>
+                        <span class="time">
+                            3 weeks
+                        </span>
+                        <span class="team">
+                            3x artists, 2x designer, 2x programmers
+                        </span>
+                    </div>
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand4">
+                    <p>Enschede's Lost Chapter is a mobile App for and Augmented Reality Treasure Hunt in the city of Enschede. 
+                        The users can explore the city and will receive audio feedback, when reaching a point of interest. By following 
+                        the sound, they are able to find a variety of buildings in downtown Enschede and use the camera to see
+                        what the environment looked like many years ago as well as learn some interesting facts about what happened
+                        and who lived at these places. 
+                    </p>
+                    <br>
+                    <p>I worked on this project with a group of 5 people in Unity. I worked on the <mark>GPS integration with a custom map</mark> 
+                        by researching and integrating the <mark><a class="link" href="https://www.mapbox.com/unity">Mapbox SDK</a></mark> and implemented the audio feedback. 
+                        It works by the user entering an area of interest which then triggers a sound relating to the corresponding building.
+                        Then the app changes the volume of the <mark>sound based on your distance to the actual building</mark>.
+                    </p>
+                </li>
+                <li id="zoo" class="projectItem project-item-collapsed">
+                    <h2>Zoo Adventure</h2>
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onclick='expandProject("testGridExpand5", "zoo")'>
+                        <img src="img/zooAdventure.jpg" alt="zoo">
+                        <img class="vidReplacement" src="img/zoo start.jpg" alt="zoo">
+                        <img class="vidReplacement" src="img/zooGame.jpg" alt="zoo">
+                        <p>MORE</p>
+                    </button>
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Summer 2020
+                        </span>
+                        <span class="misc">
+                            Virtual Zoo Experience
+                        </span>
+                        <span class="engine">
+                            Gxp Engine
+                        </span>
+                        <span class="time">
+                            2 weeks
+                        </span>
+                        <span class="team">
+                            2x artists, 1x designer, 1 programmer (me)
+                        </span>
+                    </div>
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand5">
+                    <p>Zoo Adventure is a small application created to digitally imitate the experience of going to the Zoo for kids
+                        who cannot go outside because of the Corona Virus. This was a school project that I did all the programming for.
+                        </p>
+                        <br>
+                    <p>The kids can choose their avatar and walk with WASD/Arrow keys through the Zoo, watch the animals go about their day 
+                        and hear the characteristic sounds as well as click animals to pet them and drag the right food from their inventory
+                        towards the animals in order to feed them.
+                    </p>
+                </li>
+                <li id="deltastar" class="projectItem project-item-collapsed">
+                    <h2>DELTASTAR</h2>
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onclick='expandProject("testGridExpand6", "deltastar")'>
+                        <img src="img/deltaStar.jpg" alt="deltaStar">
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/deltastartrailer.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/deltastar.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>MORE</p>
+                    </button>
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Fall 2019
+                        </span>
+                        <span class="misc">
+                            Arcade
+                        </span>
+                        <span class="misc">
+                            Bullet Hell
+                        </span>
+                        <span class="engine">
+                            GXP Engine
+                        </span>
+                        <span class="time">
+                            2 weeks
+                        </span>
+                        <span class="team">
+                            2x artists, 1x designer, 1 programmer (me)
+                        </span>
+                    </div>
+                   
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand6">
+                    <p>Delta Star is an Arcade Game and it was one of the first games I ever got to work on.
+                        It is also to this day one of my favorites, because it was just such a fun project to do.
+                    </p>
+                    <br>
+                    <img  src="img/deltastarController.jpg" alt="deltaStar">
+                    <p>In the game you control a spaceship and must defeat various waves of aliens by dodging their attacks
+                        and shooting them with bullets and rockets. You can do a short teleport "warp" for a last inute escape
+                        from enemy bullets and when enemies die they have a chance to drop debuffs. These debuffs lower 
+                        your speed, rocket/bullet cooldown or other stats by a percentage. After a while a boss will spawn and 
+                        after defeating it all collected debuffs turn into buffs and the game starts anew with a strong boss to 
+                        all enemie's stats. 
+                    </p>
+                    <br>
+                    <p>For this project I did <mark> the programming</mark> on my own in C# using an engine our teachers had created (Gxp Engine)
+                        and I <mark>painted the controller</mark> we had to built with acrylic paints (one of my hobbies).
+                    </p>
+                </li>
+                <li id="pn" class="projectItem project-item-collapsed">
+                    <h2>PN</h2>
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)' onclick='expandProject("testGridExpand7", "pn")'>
+                        <img src="img/PN.jpg" alt="playable nightmare">
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/pnVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/pnCutscene.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>MORE</p>
+                    </button>
                     <div class="tag">
                         <span class="progLang">
                             Java
@@ -262,42 +416,34 @@
                             2x artists, 2x designer, 1 programmer
                         </span>
                     </div>
-                </div>
-                <div class="Zoo">
-                    <h2>Zoo Adventure</h2>
-                    <div class="projectMore moreModeOff" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'>
-                        <img src="img/zooAdventure.jpg" alt="zoo">
-                        <p>MORE</p>
-                    </div>
-                    <div class="tag">
-                        <span class="progLang">
-                            C#
-                        </span>
-                        <span class="date">
-                            Summer 2020
-                        </span>
-                        <span class="misc">
-                            Virtual Zoo Experience
-                        </span>
-                        <span class="engine">
-                            Gxp Engine
-                        </span>
-                        <span class="time">
-                            2 weeks
-                        </span>
-                        <span class="team">
-                            2x artists, 1x designer, 1 programmer
-                        </span>
-                    </div>
-                </div>
-
-            </div>
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand7">
+                    <p>PN was the first 'proper' game I programmed that wasn't just a very rough ugly prototype.
+                      It was the firts group project after we'd had 2 months of coding classes, learning Processing.
+                      The task was to create a short point&click game and we were inspired by the horror demo P.T. (Playable Trailer)
+                    where (for those that don't know) you explore a hallway and everytime you leave a room things change around you.
+                    </p>
+                    <br>
+                    <p>P.N. (Playable Nightmare) has 3(~4) different rooms. The player wakes up in a locked room with a big door
+                        behind which they can hear someone else desperately asking to be let out. The player needs to try to find a door
+                        and a key to get past teh extensive security of this heavy door. As the player finds things and explores different areas
+                        other past areas change and finally there is a spooky reveal at the end.
+                    </p>
+                    <br>
+                    <p>Looking back at this project, despite it having been a very stressful two weeks and remembering
+                        all the issues we had with organizing and working in this group dynamic of artists, designers and programmers for the first time,
+                        I still believe this was a very exiting project. I had so many doubts about choosing Programming as my specialization track
+                        in this study, because I just didn't know if I could do it, but programming every day from morning to evening and figuring out
+                        how to do all these things one by one, solving problems as they came up all on my own, it was just such a fun time and even if I got stuck
+                        I always managed to get 'unstuck' again. After this project I just knew I really really wanted to try, because of all the things to do in
+                        game development, making it all work was with code was magical. I was a wizard writing my own spells.
+                    </p>
+                    
+                </li>
+                
+            </ul>
             <hr>
-        </div>
-
-        <div id="projectsExpand" class="projectsExpand">
-            <h1>PASS THE GAS</h1>
-
+            
         </div>
 
         <div id="contact" class="contact">
@@ -310,7 +456,7 @@
 
 
     
-       
+
 
 
 
@@ -322,18 +468,63 @@
 
 <script>
 
-    function elementVisibility(id)
-    {
-        var element = document.getElementById(id);
-        if(element.classList.contains("moreModeOn")){
-            element.classList.remove("moreModeOn");
-            element.classList.add("moreModeOff");
-        }else{
-            element.classList.remove("moreModeOff");
-            element.classList.add("moreModeOn");
+    class ProjectItem{
+
+        constructor(listItem, expansion){
+            this.listItem = listItem;
+            this.button = listItem.querySelector(".projectMore");
+            this.expansion = expansion;
+        }
+
+        toggleMoreMode(){
+            if(this.button.classList.contains("moreModeOn")){
+                this.button.classList.remove("moreModeOn");
+                this.button.classList.add("moreModeOff");
+             }else{
+                this.button.classList.remove("moreModeOff");
+                this.button.classList.add("moreModeOn");
+            }
+        }
+
+        expandProject2(){
+            this.expansion.classList.remove("is-hidden");
+            this.listItem.classList.add("is-selected");
+            this.listItem.classList.add("project-item-expanded");
+            this.listItem.classList.remove("project-item-collapsed");
+            var p = this.button.querySelector("p");
+            p.textContent = "LESS";
+        }
+
+        collapseProject2(){
+            this.expansion.classList.add("is-hidden");
+            this.listItem.classList.remove("is-selected");
+            this.listItem.classList.remove("project-item-expanded");
+            this.listItem.classList.add("project-item-collapsed");
+            var p = this.button.querySelector("p");
+            p.textContent = "MORE";
+        }
+
+        toggleProjectExpand(){
+            console.log(this.expansion);
+            if(this.expansion.classList.contains("is-hidden")){
+               this.expandProject2();
+            }else{
+              this.collapseProject2();
+            }
         }
     }
 
+
+    const listItems = document.querySelectorAll(".projectItem");
+    const expansionList = document.querySelectorAll(".fullwidth");
+    const projectItems = [];
+    for (let i = 0; i < listItems.length; i++){
+        projectItems[i] = new ProjectItem(listItems[i], expansionList[i]);
+       // projectItems[i].button.addEventListener('mousedown', projectItems[i].toggleProjectExpand);
+        console.log(projectItems[i]);
+    };
+
+    
     function toggleMoreMode(element)
     {
         if(element.classList.contains("moreModeOn")){
@@ -345,9 +536,39 @@
         }
     }
 
-    function expandProject(divname){
-        var div = document.getElementById(divname);
-        div.classList.add("projectExpanded");
+    
+    function expandProject(elementName, listElementName)
+    {
+        document.getElementById("projects").scrollIntoView()
+        var element = document.getElementById(elementName);
+        var listElement = document.getElementById(listElementName);
+        var p = listElement.querySelector("p");
+        console.log(p);
+        if(element.classList.contains("is-hidden")){ 
+            closeAllProjects();
+            element.classList.remove("is-hidden");
+            listElement.classList.add("is-selected");
+            listElement.classList.add("project-item-expanded");
+            listElement.classList.remove("project-item-collapsed");
+            p.textContent = "LESS";
+        }else{
+            element.classList.add("is-hidden");
+            listElement.classList.remove("is-selected");
+            listElement.classList.remove("project-item-expanded");
+            listElement.classList.add("project-item-collapsed");
+            p.textContent = "MORE";
+        }
+
     }
+
+    function closeAllProjects()
+    {
+        if(projectItems.length > 0){
+            projectItems.forEach((item) => {
+                item.collapseProject2();
+            });
+        }
+    }
+ 
 
 </script>

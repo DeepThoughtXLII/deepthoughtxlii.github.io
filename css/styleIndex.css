@@ -6,7 +6,10 @@
     --pink: #FFA585;
     --red: #FF7847;
     --blue: #6A71A0;
+    --blueSelected: #c4cceb;
     --darkBlue: #2D3047;
+
+    --highlighted-text: var(--blue);
 
     --purple: #890cd6;
     --yellow: #e0bf00;
@@ -41,6 +44,10 @@
     grid-area: projectsExpand;
 }
 
+.contact{
+    grid-area: contact;
+}
+
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -51,37 +58,120 @@
 
 }
 
+ul[class] {
+    margin: 0;
+    margin-bottom: 5rem;
+    padding: 0;
+}
 
+ul[class] li {
+    list-style: none;
+    margin: 1rem;
+    padding: 1.4rem;
+}
 
+ul[class] li.projectItem > * {
+    margin: 0;
+
+}
 
 .projectBubble {
     display: grid;
-    grid-template-areas:
-        'passGas heavensFall treasure'
-        'uwu zoo deltaStar';
-    gap: 25px;
-    padding: 2vw 2vw;
+    gap: 1rem;
+    grid-auto-flow: dense; /* [2] */
+    grid-template-columns: repeat(auto-fit, 20rem); /* [1] */
+    justify-content: center;
 }
 
-.projectExpanded{
-    width: 100%;
-    color:#ff1b1b;
+.projectBubble > * {
+    background: var(--blue);
+}
+
+/* [3] Make fullwidth card span all grid columns. */
+.fullwidth {
+    grid-row: 1/ 1;
+    grid-column: 2 / -1;
+    transition-delay: 1s;
+}
+
+.project-item-expanded{
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    
+}
+
+.is-hidden {
+    display: none;
+}
+
+.fullwidth,
+.is-selected {
+    background: var(--red);
+
+}
+
+.fullwidth p{
+    margin: 0;
+    font-family: 'Lucida Sans Unicode';
+    font-size: auto;
+    line-height: 30px;
+}
+
+.fullwidth p mark{
+    font-weight: bold;
+    background: none;
+    color: var(--highlighted-text);
+}
+
+.fullwidth a.button{
+    display: inherit;
+background-color: var(--red);
+border-style: dashed;
+border-width: 0.3rem;
+border-color: var(--strongRed);
+margin-top: 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--highlighted-text);
+  font-family: 'Lucida Sans Unicode';
+    font-size: auto;
+}
+
+.fullwidth a.button:hover{
+    background-color: var(--pink);
+    border-color: var(--strongRed);
+}
+
+.fullwidth a.link{
+    color: var(--blueSelected);    
+}
+
+.fullwidth a.link:hover{
+    color: var(--strongRed);
+}
+
+.fullwidth i {
+    color: var(--blue);
+    background: none;
+}
+
+.fullwidth img{
+    width: 33%;
+    display: inherit;
+    float: right;
+    object-fit: cover;
+    overflow: hidden;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
 }
 
 .grid-container h1 {
     font-family: 'Anton', sans-serif;
-
     font-size: 3vw;
     color: #2D3047;
 }
 
-.projectBubble div {
-    background-color: var(--blue);
-    padding: 30px;
-    width: 20vw;
-    overflow: hidden;
-    height: fit-content;
-}
 
 .projectBubble .tag {
     padding: 0.5vw;
@@ -140,16 +230,14 @@
     position: relative;
 }
 
-.projectBubble div img {
+.projectBubble button img {
     width: 100%;
-    height: 70%;
     object-fit: cover;
     overflow: hidden;
 }
 
 
-
-.projectBubble div p{
+.projectBubble button p{
     font-family: 'Anton', sans-serif;
     position: absolute;
     top: 50%;
@@ -158,63 +246,72 @@
     color:white;
     font-size: 3vw;
     margin:0px;
+    visibility: hidden;
+}
+
+
+.projectBubble button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }
 
 .projectBubble .moreModeOn p{
     visibility: visible;
 }
 
-.projectBubble .moreModeOff p{
-    visibility: hidden;
-}
-
 .projectBubble .moreModeOn img{
     filter: grayscale(100%) opacity(75%);
 }
 
-.projectBubble .moreModeOff img{
-    filter:inherit;
+.projectBubble .moreModeOn video{
+    filter: grayscale(100%) opacity(75%);
 }
 
-.projectBubble div h2 {
-    font-family: 'Anton', sans-serif;
+.projectBubble .project-item-expanded img.vidReplacement{
+    display: inherit;
+}
+
+.projectBubble .project-item-collapsed img.vidReplacement{
+    filter: none;
+    display: none;
+}
+
+.projectBubble .project-item-expanded  video{
+    display: inherit;
+}
+
+.projectBubble .project-item-collapsed  video{
+    display:none;
+}
+
+.projectBubble .project-item-expanded button img{
+    display: none;
+}
+
+.projectBubble .project-item-collapsed button img{
+    display:inherit;
+}
+
+.projectBubble  video{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.projectBubble li h2 {
     text-align: center;
-    font-size: 2vw;
+    margin: 0 auto;
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
     color: var(--pink);
 }
 
-.deltaStar {
-    grid-area: deltaStar;
 
-}
 
-.hpUwU {
-    grid-area: uwu;
-
-}
-
-.treasureHunt {
-    grid-area: treasure;
-
-}
-
-.passTheGas {
-    grid-area: passGas;
-}
-
-.heavensFall {
-    grid-area: heavensFall;
-
-}
-
-.Zoo {
-    grid-area: zoo;
-}
-
-.PT {
-    grid-area: pt;
-
-}
 
 /* ___________________________________________________________________________________________________________________________________
                                                             the header TABEA VAN HASZ 
