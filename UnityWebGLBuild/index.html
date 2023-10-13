@@ -99,12 +99,14 @@
 
       loadingBar.style.display = "block";
 
+      var unityGame;
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
+          unityGame = unityInstance;
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
@@ -115,10 +117,24 @@
       };
       document.body.appendChild(script);
     </script>
-    <div>
+     <div>
       <label>Text</label><br>
-      <input type="text"><br>
-      <button id="sendMsg" onclick="unityInstance.SendMessage('Log', 'CreateNewLog', 'Hello World')">Submit</button>
-  </div>
+      <input type="text" id="inputT" style="margin: 10px;"><br>
+      <button id="sendMsg" onclick="SendData()">Submit</button>
+    </div>
+  <script>
+    window.addEventListener('message', messageListener, false);
+
+    function messageListener(event) {
+        console.log(event.data);
+    }
+
+    function SendData(){
+      var inputText = document.getElementById("inputT");
+      unityGame.SendMessage('Log', 'CreateNewLog', inputText.value);
+      inputText.value = "";
+
+    }
+    </script>
   </body>
 </html>
