@@ -127,6 +127,7 @@
 
     function messageListener(event) {
         console.log(event.data);
+        unityGame.SendMessage('Log', 'CreateNewLog', event.data);
     }
 
     function SendData(){
