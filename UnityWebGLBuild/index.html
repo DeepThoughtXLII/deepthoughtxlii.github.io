@@ -126,8 +126,11 @@
     window.addEventListener('message', messageListener, false);
 
     function messageListener(event) {
+      if (event.origin === "https://deepthoughtxlii.github.io/UnityWebGLBuild2/index.html") {
         console.log(event.data);
         unityGame.SendMessage('Log', 'CreateNewLog', event.data);
+        //unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
+      }
     }
 
     function SendData(){

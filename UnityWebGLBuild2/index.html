@@ -120,11 +120,18 @@
     <p id="log">space for a log</p>
     <script>
       var ReceiverWindow;
+      var msg;
 
-      function ReceiveMessage(msg){
+      function ReceiveMessage(pMsg){
+        msg = pMsg;
         if(ReceiverWindow === undefined){
           ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLBuild/index.html");
+          ReceiverWindow.addEventListener("DOMContentLoaded", Post, false);
         }
+        
+      }
+
+      function Post(){
         ReceiverWindow.postMessage(msg, "https://deepthoughtxlii.github.io/UnityWebGLBuild/index.html");
         console.log("Sent message " + msg);
         document.getElementById("log").innerText = "";
