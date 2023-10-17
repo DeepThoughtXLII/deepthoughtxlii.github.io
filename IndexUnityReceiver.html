@@ -19,7 +19,7 @@ function messageListener(event) {
     unityGame.SendMessage('Log', 'CreateNewLog', event.data);
     unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
   }else{
-    console.log("wrong address" + event.data);
+    console.log("wrong address" + event.origin);
     unityGame.SendMessage('Log', 'CreateNewLog', event.data);
     unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
   }
