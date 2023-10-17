@@ -133,17 +133,32 @@
   //RECEIVING DATA VON UNITY
   function messageListener(event) {
     console.log("received message");
-    if (event.origin === "https://deepthoughtxlii.github.io/") {
-      console.log(event.data);
-      unityGame.SendMessage('Log', 'CreateNewLog', event.data);
-      unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
+    if (event.origin === "https://deepthoughtxlii.github.io") {
+      if(hasJsonStructure(event.data)){
+        unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
+      }else{
+        unityGame.SendMessage('Log', 'CreateNewLog', event.data);
+      }
     }else{
       console.log("wrong address" + event.origin);
-      unityGame.SendMessage('Log', 'CreateNewLog', event.data);
-      unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
     }
   }
+
+
   
+  //returns true if string is a JSON object and false for everything else
+  function hasJsonStructure(str) {
+    if (typeof str !== 'string') return false;
+    try {
+        const result = JSON.parse(str);
+        const type = Object.prototype.toString.call(result);
+        return type === '[object Object]' 
+            || type === '[object Array]';
+    } catch (err) {
+        return false;
+    }
+}
+
   //SENDING DATA TO UNITY BUILD
   function SendData(){
     var inputText = document.getElementById("inputT");
