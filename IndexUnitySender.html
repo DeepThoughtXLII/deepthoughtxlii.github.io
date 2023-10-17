@@ -1,0 +1,23 @@
+<p id="log">space for a log</p>
+    <script>
+      var ReceiverWindow;
+      var msg = "no message";
+
+      function ReceiveMessage(pMsg){
+        msg = pMsg;
+        if(ReceiverWindow === undefined){
+          ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
+          window.addEventListener('message', Post, false);
+        }else{
+            Post();
+        }
+        
+      }
+
+      function Post(){
+        ReceiverWindow.postMessage(msg, "https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
+        console.log("Sent message " + msg);
+        document.getElementById("log").innerText = "";
+        document.getElementById("log").innerText = msg;
+      }
+    </script>
