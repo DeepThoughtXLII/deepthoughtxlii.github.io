@@ -124,11 +124,13 @@
     </div>
   <script>
      window.onload = function(e){ 
+      console.log("loaded and sent confirmation");
       window.parent.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
    }
     window.addEventListener('message', messageListener, false);
   
     function messageListener(event) {
+      console.log("received message");
       if (event.origin === "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html") {
         console.log(event.data);
         unityGame.SendMessage('Log', 'CreateNewLog', event.data);
