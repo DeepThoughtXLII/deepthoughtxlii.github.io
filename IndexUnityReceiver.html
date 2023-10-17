@@ -1,28 +1,34 @@
 <div>
-    <label>Text</label><br>
-    <input type="text" id="inputT" style="margin: 10px;"><br>
-    <button id="sendMsg" onclick="SendData()">Submit</button>
-  </div>
+  <label>Text</label><br>
+  <input type="text" id="inputT" style="margin: 10px;"><br>
+  <button id="sendMsg" onclick="SendData()">Submit</button>
+</div>
 <script>
-   window.onload = function(e){ 
-    window.parent.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
- }
-  window.addEventListener('message', messageListener, false);
+window.addEventListener('message', messageListener, false);
 
-  function messageListener(event) {
-      if (event.origin === "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html") {
-        console.log(event.data);
-        unityGame.SendMessage('Log', 'CreateNewLog', event.data);
-        //unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
-      }else{
-        console.log("wrong address" + event.data);
-      }
-    }
+function ReceiveMessage(msg){
+  window.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
+}
 
-  function SendData(){
-    var inputText = document.getElementById("inputT");
-    unityGame.SendMessage('Log', 'CreateNewLog', inputText.value);
-    inputText.value = "";
-
+//RECEIVING DATA VON UNITY
+function messageListener(event) {
+  console.log("received message");
+  if (event.origin === "https://deepthoughtxlii.github.io/") {
+    console.log(event.data);
+    unityGame.SendMessage('Log', 'CreateNewLog', event.data);
+    unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
+  }else{
+    console.log("wrong address" + event.data);
+    unityGame.SendMessage('Log', 'CreateNewLog', event.data);
+    unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
   }
-  </script>
+}
+
+//SENDING DATA TO UNITY BUILD
+function SendData(){
+  var inputText = document.getElementById("inputT");
+  unityGame.SendMessage('Log', 'CreateNewLog', inputText.value);
+  inputText.value = "";
+
+}
+</script>
