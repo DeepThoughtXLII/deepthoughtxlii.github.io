@@ -132,7 +132,7 @@
   
   //RECEIVING DATA VON UNITY
   function messageListener(event) {
-    console.log("received message");
+    console.log("received message" + event.data);
     if (event.origin === "https://deepthoughtxlii.github.io") {
       if(hasJsonStructure(event.data)){
         unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
