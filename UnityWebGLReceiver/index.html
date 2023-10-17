@@ -117,39 +117,40 @@
       };
       document.body.appendChild(script);
     </script>
-    <div>
-      <label>Text</label><br>
-      <input type="text" id="inputT" style="margin: 10px;"><br>
-      <button id="sendMsg" onclick="SendData()">Submit</button>
-    </div>
-    <script>
-    window.addEventListener('message', messageListener, false);
-    
-    function ReceiveMessage(msg){
-      window.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
+  <div>
+    <label>Text</label><br>
+    <input type="text" id="inputT" style="margin: 10px;"><br>
+    <button id="sendMsg" onclick="SendData()">Submit</button>
+  </div>
+  <script>
+  window.addEventListener('message', messageListener, false);
+  
+  function ReceiveMessage(msg){
+    console.log("sending message" + msg);
+    window.opener.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
+  }
+  
+  //RECEIVING DATA VON UNITY
+  function messageListener(event) {
+    console.log("received message");
+    if (event.origin === "https://deepthoughtxlii.github.io/") {
+      console.log(event.data);
+      unityGame.SendMessage('Log', 'CreateNewLog', event.data);
+      unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
+    }else{
+      console.log("wrong address" + event.data);
+      unityGame.SendMessage('Log', 'CreateNewLog', event.data);
+      unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
     }
-    
-    //RECEIVING DATA VON UNITY
-    function messageListener(event) {
-      console.log("received message");
-      if (event.origin === "https://deepthoughtxlii.github.io/") {
-        console.log(event.data);
-        unityGame.SendMessage('Log', 'CreateNewLog', event.data);
-        unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
-      }else{
-        console.log("wrong address" + event.data);
-        unityGame.SendMessage('Log', 'CreateNewLog', event.data);
-        unityGame.SendMessage('Main Camera', 'SetCamera', event.data);
-      }
-    }
-    
-    //SENDING DATA TO UNITY BUILD
-    function SendData(){
-      var inputText = document.getElementById("inputT");
-      unityGame.SendMessage('Log', 'CreateNewLog', inputText.value);
-      inputText.value = "";
-    
-    }
-    </script>
+  }
+  
+  //SENDING DATA TO UNITY BUILD
+  function SendData(){
+    var inputText = document.getElementById("inputT");
+    unityGame.SendMessage('Log', 'CreateNewLog', inputText.value);
+    inputText.value = "";
+  
+  }
+  </script>
   </body>
 </html>

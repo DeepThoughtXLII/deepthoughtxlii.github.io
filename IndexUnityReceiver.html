@@ -7,7 +7,8 @@
 window.addEventListener('message', messageListener, false);
 
 function ReceiveMessage(msg){
-  window.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
+  console.log("sending message" + msg);
+  window.opener.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
 }
 
 //RECEIVING DATA VON UNITY
