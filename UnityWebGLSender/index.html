@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My project</title>
+    <title>Unity WebGL Player | SustainabilityGame_3D</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">My project</div>
+        <div id="unity-build-title">SustainabilityGame_3D</div>
       </div>
     </div>
     <script>
@@ -58,13 +58,13 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/UnityWebGLSender.loader.js";
       var config = {
-        dataUrl: buildUrl + "/UnityWebGLSender.data",
-        frameworkUrl: buildUrl + "/UnityWebGLSender.framework.js",
-        codeUrl: buildUrl + "/UnityWebGLSender.wasm",
+        dataUrl: buildUrl + "/UnityWebGLSender.data.br",
+        frameworkUrl: buildUrl + "/UnityWebGLSender.framework.js.br",
+        codeUrl: buildUrl + "/UnityWebGLSender.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "My project",
-        productVersion: "0.1",
+        companyName: "Anera Interactive",
+        productName: "SustainabilityGame_3D",
+        productVersion: "0.1.0",
         showBanner: unityShowBanner,
       };
 
@@ -117,8 +117,7 @@
       };
       document.body.appendChild(script);
     </script>
-    <p id="log">space for a log</p>
-    <script>
+     <script>
       window.addEventListener('message', OnPresentationWindowLoaded, false);
     
       var ReceiverWindow;
@@ -129,6 +128,7 @@
         Post();
       }
     
+      //
       function ReceiveMessage(pMsg){
         msg = pMsg;
         if(ReceiverWindow === undefined){
