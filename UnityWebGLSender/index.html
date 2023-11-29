@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/UnityWebGLSender.loader.js";
       var config = {
-        dataUrl: buildUrl + "/UnityWebGLSender.data.br",
+        dataUrl: buildUrl + "/UnityWebGLSender.data",
         frameworkUrl: buildUrl + "/UnityWebGLSender.framework.js",
-        codeUrl: buildUrl + "/UnityWebGLSender.wasm.br",
+        codeUrl: buildUrl + "/UnityWebGLSender.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Anera Interactive",
         productName: "SustainabilityGame_3D",
@@ -117,33 +117,33 @@
       };
       document.body.appendChild(script);
     </script>
-     <script>
-      window.addEventListener('message', OnPresentationWindowLoaded, false);
-    
-      var ReceiverWindow;
-      var msg = "no message";
-    
-      function OnPresentationWindowLoaded(){
-        console.log("received message " + event.data);
-        Post();
-      }
-    
-      //
-      function ReceiveMessage(pMsg){
-        msg = pMsg;
-        if(ReceiverWindow === undefined){
-          ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
-        }else{
+        <script>
+          window.addEventListener('message', OnPresentationWindowLoaded, false);
+        
+          var ReceiverWindow;
+          var msg = "no message";
+        
+          function OnPresentationWindowLoaded(){
+            console.log("received message " + event.data);
             Post();
-        }
-      }
-    
-      function Post(){
-        ReceiverWindow.postMessage(msg, "https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
-        console.log("Sent message " + msg);
-        document.getElementById("log").innerText = "";
-        document.getElementById("log").innerText = msg;
-      }
-    </script>
+          }
+        
+          //
+          function ReceiveMessage(pMsg){
+            msg = pMsg;
+            if(ReceiverWindow === undefined){
+              ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
+            }else{
+                Post();
+            }
+          }
+        
+          function Post(){
+            ReceiverWindow.postMessage(msg, "https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
+            console.log("Sent message " + msg);
+            document.getElementById("log").innerText = "";
+            document.getElementById("log").innerText = msg;
+          }
+        </script>
   </body>
 </html>
