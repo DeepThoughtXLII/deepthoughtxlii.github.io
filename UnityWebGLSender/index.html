@@ -132,11 +132,11 @@
           function ReceiveMessage(pMsg){
             msg = pMsg;
             if(ReceiverWindow === undefined){
-              Debug.Log("Receiver window undefined");
+              console.log("Receiver window undefined");
               ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
-              Debug.Log("opened new window");
+              console.log("opened new window");
             }else{
-              Debug.Log("Receiver Window already open. Message Posting...")
+              console.log("Receiver Window already open. Message Posting...")
                 Post();
             }
           }
