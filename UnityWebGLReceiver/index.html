@@ -117,46 +117,46 @@
       };
       document.body.appendChild(script);
     </script>
-      <script>
-        window.addEventListener('message', messageListener, false);
-        
+    <script>
+      window.addEventListener('message', messageListener, false);
       
-        function ReceiveMessage(msg){
-          console.log("sending message" + msg);
-          window.opener.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
-        }
-        
-        //receives data from the other window and forwards it into unity build
-        function messageListener(event) {
-          console.log("received message" + event.data);
-          if (event.origin === "https://deepthoughtxlii.github.io") {
-            if(hasJsonStructure(event.data)){
-              SendData('Tilemap', 'ReceivePacket', event.data);
-            }
-          }else{
-            console.log("wrong address" + event.origin);
-          }
-        }
-      
-      
-        
-        //returns true if string is a JSON object and false for everything else
-        function hasJsonStructure(str) {
-          if (typeof str !== 'string') return false;
-          try {
-              const result = JSON.parse(str);
-              const type = Object.prototype.toString.call(result);
-              return type === '[object Object]' 
-                  || type === '[object Array]';
-          } catch (err) {
-              return false;
-          }
+    
+      function ReceiveMessage(msg){
+        console.log("sending message" + msg);
+        window.opener.postMessage("done", "https://deepthoughtxlii.github.io/UnityWebGLSender/index.html");
       }
       
-        //SENDING DATA TO UNITY BUILD
-        function SendData(object, functionName, parameter){
-          unityGame.SendMessage(object, functionName, parameter);
+      //receives data from the other window and forwards it into unity build
+      function messageListener(event) {
+        console.log("received message" + event.data);
+        if (event.origin === "https://deepthoughtxlii.github.io") {
+          if(hasJsonStructure(event.data)){
+            SendData('Tilemap', 'ReceivePacket', event.data);
+          }
+        }else{
+          console.log("wrong address" + event.origin);
         }
-        </script>
+      }
+    
+    
+      
+      //returns true if string is a JSON object and false for everything else
+      function hasJsonStructure(str) {
+        if (typeof str !== 'string') return false;
+        try {
+            const result = JSON.parse(str);
+            const type = Object.prototype.toString.call(result);
+            return type === '[object Object]' 
+                || type === '[object Array]';
+        } catch (err) {
+            return false;
+        }
+    }
+    
+      //SENDING DATA TO UNITY BUILD
+      function SendData(object, functionName, parameter){
+        unityGame.SendMessage(object, functionName, parameter);
+      }
+      </script>
   </body>
 </html>
