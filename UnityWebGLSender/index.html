@@ -131,7 +131,7 @@
           //
           function ReceiveMessage(pMsg){
             msg = pMsg;
-            if(ReceiverWindow === undefined){
+            if(!ReceiverWindow){
               console.log("Receiver window undefined");
               ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
               console.log("opened new window: " + ReceiverWindow);
