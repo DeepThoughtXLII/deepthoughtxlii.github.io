@@ -134,7 +134,7 @@
             if(ReceiverWindow === undefined){
               console.log("Receiver window undefined");
               ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
-              console.log("opened new window");
+              console.log("opened new window: " + ReceiverWindow);
             }else{
               console.log("Receiver Window already open. Message Posting...")
                 Post();
@@ -142,6 +142,7 @@
           }
         
           function Post(){
+            console.log(msg);
             ReceiverWindow.postMessage(msg, "https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
             console.log("Sent message " + msg);
             // document.getElementById("log").innerText = "";
