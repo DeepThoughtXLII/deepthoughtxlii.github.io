@@ -131,7 +131,7 @@
         console.log("received message" + event.data);
         if (event.origin === "https://deepthoughtxlii.github.io") {
           if(hasJsonStructure(event.data)){
-            SendData('Tilemap', 'ReceivePacket', event.data);
+            SendData('InputManager', 'ReceivePacket', event.data);
           }
         }else{
           console.log("wrong address" + event.origin);
