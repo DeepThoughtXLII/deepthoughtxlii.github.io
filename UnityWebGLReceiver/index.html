@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/UnityWebGLReceiver.loader.js";
+      var loaderUrl = buildUrl + "/UnityWebGLReceiver2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/UnityWebGLReceiver.data",
-        frameworkUrl: buildUrl + "/UnityWebGLReceiver.framework.js",
-        codeUrl: buildUrl + "/UnityWebGLReceiver.wasm",
+        dataUrl: buildUrl + "/UnityWebGLReceiver2.data",
+        frameworkUrl: buildUrl + "/UnityWebGLReceiver2.framework.js",
+        codeUrl: buildUrl + "/UnityWebGLReceiver2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Anera Interactive",
         productName: "SustainabilityGame_3D",
@@ -131,7 +131,7 @@
         console.log("received message" + event.data);
         if (event.origin === "https://deepthoughtxlii.github.io") {
           if(hasJsonStructure(event.data)){
-            SendData('Tilemap', 'ReceivePacket', event.data);
+            SendData('InputManager', 'ReceivePacket', event.data);
           }
         }else{
           console.log("wrong address" + event.origin);
