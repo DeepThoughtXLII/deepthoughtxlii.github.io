@@ -1,24 +1,33 @@
+
+<span onclick="OpenReceiverWindow()">open new window</span>
 <script>
   window.addEventListener('message', OnPresentationWindowLoaded, false);
 
+
+
   var ReceiverWindow;
   var msg = "no message";
+  var windowReady = false;
 
   function OnPresentationWindowLoaded(){
     console.log("received message " + event.data);
     Post();
   }
 
-  //
-  function ReceiveMessage(pMsg){
-    msg = pMsg;
+  function OpenReceiverWindow(){
     if(!ReceiverWindow){
       console.log("Receiver window undefined");
       ReceiverWindow = window.open("https://deepthoughtxlii.github.io/UnityWebGLReceiver/index.html");
       console.log("opened new window: " + ReceiverWindow);
-    }else{
-      console.log("Receiver Window already open. Message Posting...")
-        Post();
+      windowReady = true;
+    }
+  }
+
+  //
+  function ReceiveMessage(pMsg){
+    msg = pMsg;
+    if(windowReady){
+      Post();
     }
   }
 
