@@ -67,7 +67,7 @@
         <div id="intro" class="intro">
             <h1>ABOUT</h1>
             <div class="introduction">
-                <img src="img/WhatsApp Image 2022-11-30 at 22.20.00.jpg" alt="profile picture">
+                <img id="profilePic" src="img/face.jpg" alt="profile picture">
 
                 <h2>Hello.</h2>
 
@@ -89,6 +89,45 @@
         <div id="projects" class="projects">
             <h1>PROJECTS</h1>
             <ul  class="projectBubble">
+                <li id="mushroom" class="projectItem project-item-collapsed">
+                    <h2>Platforming Prototype</h2>        
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'  onclick='expandProject("testGridExpand", "mushroom")'>
+                        <img src="img/Idle.png" alt="mushroomPic">
+                        <video width="auto" height="auto" autoplay muted loop>
+                            <source src="vid/mushroom.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>MORE</p>
+                    </button>                   
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            Fall 2024
+                        </span>
+                        <span class="misc">
+                            Rough Prototyope
+                        </span>
+                        <span class="engine">
+                            Unity
+                        </span>
+                        <span class="time">
+                            1 months
+                        </span>
+                        <span class="team">
+                            1x programmer
+                        </span>
+                        <span class="state">
+                            Work in Progress
+                        </span>
+                    </div>
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand">
+                    <p>This prototype of a mushroom platforming game is something I'm working on alone as a small side project. I hadn' worked on a platformer before so this was quite fun as an exercise.
+                        I have some plans for other features I would like to add, but I have to see when I have time to do so.
+                    </p>
+                </li>
                 <li id="transitiegame" class="projectItem project-item-collapsed">
                     <h2>TransitieGame</h2>        
                     <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'  onclick='expandProject("testGridExpand", "transitiegame")'>

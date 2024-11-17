@@ -10,6 +10,11 @@
     --darkBlue: #2D3047;
 
     --highlighted-text: var(--blue);
+    --background-color: var(--pink);
+    --background-accent: var(--red);
+    --secondBackground-color: var(--blue);
+    --textColor: var(--darkBlue);
+    --textColorLight: var(--pink);
 
     --purple: #890cd6;
     --yellow: #e0bf00;
@@ -18,6 +23,9 @@
     --strongRed: #ff1b1b;
     --orange: #ff9933;
     --lightBlue: #57c2ff;
+
+    --eerieBlack: 
+    --Charcoal
 }
 
 
@@ -34,6 +42,10 @@
 
 .intro {
     grid-area: intro;
+}
+
+#profilePic{
+    border-radius: 50%;
 }
 
 .projects {
@@ -84,7 +96,7 @@ ul[class] li.projectItem > * {
 }
 
 .projectBubble > * {
-    background: var(--blue);
+    background: var(--secondBackground-color);
 }
 
 /* [3] Make fullwidth card span all grid columns. */
@@ -106,7 +118,7 @@ ul[class] li.projectItem > * {
 
 .fullwidth,
 .is-selected {
-    background: var(--red);
+    background: var(--background-accent);
 
 }
 
@@ -125,7 +137,7 @@ ul[class] li.projectItem > * {
 
 .fullwidth a.button{
     display: inherit;
-background-color: var(--red);
+background-color: var(--background-accent);
 border-style: dashed;
 border-width: 0.3rem;
 border-color: var(--strongRed);
@@ -139,7 +151,7 @@ margin-top: 2rem;
 }
 
 .fullwidth a.button:hover{
-    background-color: var(--pink);
+    background-color: var(--background-color);
     border-color: var(--strongRed);
 }
 
@@ -152,7 +164,7 @@ margin-top: 2rem;
 }
 
 .fullwidth i {
-    color: var(--blue);
+    color: var(--background-accent);
     background: none;
 }
 
@@ -307,7 +319,7 @@ margin-top: 2rem;
     margin: 0 auto;
     font-family: 'Anton', sans-serif;
     font-size: 2rem;
-    color: var(--pink);
+    color: var(--background-color);
 }
 
 
@@ -319,9 +331,9 @@ margin-top: 2rem;
 header {
 
     font-family: 'Anton', sans-serif;
-    background-color: var(--blue);
+    background-color: var(--secondBackground-color);
     font-size: 2vw;
-    color: var(--pink);
+    color: var(--background-color);
     margin: 0;
     padding-top: 1vw;
     padding-bottom: 1vw;
@@ -442,8 +454,8 @@ hr {
     z-index: 1;
     border-width: 20px;
 
-    border-left: 2px dashed var(--red);
-    border-right: 2px dashed var(--red);
+    border-left: 2px dashed var(--background-accent);
+    border-right: 2px dashed var(--background-accent);
 }
 
 .sidenav div {
@@ -462,7 +474,7 @@ hr {
     color: #2D3047;
     display: block;
     border: none;
-    background-color: var(--pink);
+    background-color: var(--background-color);
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -473,13 +485,13 @@ hr {
 }
 
 .sidenav button:hover {
-    background-color: #FF7847;
+    background-color: var(--background-accent);
     color: #2D3047;
 }
 
 .sidenav button.selected {
-    background-color: #6A71A0;
-    color: #FFA585;
+    background-color: var(--secondBackground-color);
+    color: var(--background-color);
 }
 
 .main {
@@ -498,7 +510,7 @@ hr {
 
 
 body {
-    background-color: #FFA585;
+    background-color: var(--background-color);
 }
 
 body h2 {
@@ -512,8 +524,8 @@ body h2 {
 .introduction {
     margin: 4vw;
     padding: 40px 60px;
-    background-color: #6A71A0;
-    color: #FFA585;
+    background-color:var(--secondBackground-color);
+    color: var(--background-color);
 }
 
 .introduction>p {
