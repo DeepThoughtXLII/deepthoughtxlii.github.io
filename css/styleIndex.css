@@ -9,12 +9,12 @@
     --blueSelected: #c4cceb;
     --darkBlue: #2D3047;
 
-    --highlighted-text: var(--blue);
-    --background-color: var(--pink);
-    --background-accent: var(--red);
-    --secondBackground-color: var(--blue);
-    --textColor: var(--darkBlue);
-    --textColorLight: var(--pink);
+    --highlighted-text: var(--red);
+    --background-color: var(--paperWhite);
+    --background-accent: var(--newsBlue);
+    --secondBackground-color: var(--warmGrey);
+    --textColor: var(--eerieBlack);
+    --textColorLight: var(--paperWhite);
 
     --purple: #890cd6;
     --yellow: #e0bf00;
@@ -24,8 +24,10 @@
     --orange: #ff9933;
     --lightBlue: #57c2ff;
 
-    --eerieBlack: 
-    --Charcoal
+    --eerieBlack: #00131e;
+    --paperWhite: #f7dcc2;
+    --warmGrey: #5a656b;
+    --newsBlue: #35759b;
 }
 
 
@@ -119,6 +121,7 @@ ul[class] li.projectItem > * {
 .fullwidth,
 .is-selected {
     background: var(--background-accent);
+    color: var(--textColorLight);
 
 }
 
@@ -181,7 +184,7 @@ margin-top: 2rem;
 .grid-container h1 {
     font-family: 'Anton', sans-serif;
     font-size: 3vw;
-    color: #2D3047;
+    color: var(--eerieBlack);
 }
 
 
@@ -431,9 +434,8 @@ nav ul li a:hover {
 hr {
 
     border: 0;
-    border-top: 4px solid #FF7847;
-    border-bottom: 2px dashed #FF7847;
-
+    border-top: 4px solid var(--background-accent);
+    border-bottom: 2px dashed var(--background-accent);
     height: 3px;
 }
 
@@ -547,3 +549,28 @@ body h2 {
     max-width: 300px;
 
 }
+
+/* ___________________________________________________________________________________________________________________________________
+                                                            CONTACT
+ _______________________________________________________________________________________________________________________________________*/
+
+
+
+
+.contact {
+    margin: 4vw;
+    padding: 40px 60px;
+    background-color:var(--secondBackground-color);
+    color: var(--background-color);
+}
+
+.contact>h1{
+    color: var(--background-color);
+}
+
+.contact>p {
+    font-family: 'Lucida Sans Unicode';
+    font-size: auto;
+    line-height: 30px;
+}
+
