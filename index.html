@@ -90,7 +90,57 @@
         <div id="projects" class="projects">
             <h1>PROJECTS</h1>
             <ul  class="projectBubble">
-                <li id="mushroom" class="projectItem project-item-collapsed">
+                <li id="transitiegame" class="projectItem project-item-collapsed">
+                    <h2>TransitieGame</h2>        
+                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'  onclick='expandProject("testGridExpand9", "transitiegame")'>
+                        <img src="img/tGame.png" alt="transitiegame">
+                        <img class="vidReplacement" src="img/tGame.png" alt="gamePicture">                      
+                        <p>MORE</p>
+                    </button>                   
+                    <div class="tag">
+                        <span class="progLang">
+                            C#
+                        </span>
+                        <span class="date">
+                            2023-2024
+                        </span>
+                        <span class="misc">
+                            Serious Game Sustainbility
+                        </span>
+                        <span class="engine">
+                            Unity
+                        </span>
+                        <span class="time">
+                            2 years
+                        </span>
+                        <span class="team">
+                            1x artist, 1x designer, 1x programmer
+                        </span>
+                    </div>
+                </li>
+                <li class="fullwidth is-hidden" id="testGridExpand9">
+                    <p>The TransitieGame is a serious game that encourages cooperation in stakeholders on businessparks by allowing them to test Sustainbility measures in a safe environment.
+                        It is specifically created for entry workshops held by "Transitiemakers" (a Dutch business consulting company) targetting their customers (variety of business owners, electricity/water authorities, government workers).
+                        The game is divided into a presentation and admin version. After starting the admin version, you are able to stream the presentation version on a bigger screen to display the game for the partcipants of the workshop.
+                        Players seperate into teams and receive physical cards as resources. Using the guidance of a game master they are lead through a scenario and make decisions in a team and collaborating with other teams
+                        on how to solve different sustainability challenges a business park faces. 
+                        One unique challenge in this project was to build a completely modular map in order to enable us to mimic real-world business parks. 
+                        I worked with another developer on the technical side of this project and took the <mark>lead in organizing and managing</mark> our tasks.
+                    </p>
+                    <br>
+                    <p>
+                        My proudest contribution was the <mark>custom unity editor tooling</mark> to create the modular maps in an isometric grid, but I also worked on <mark>Camera movement, Selection of Tiles, 
+                        Upgrading Tiles, various smaller actions to support the game master during the game and the complete UI/UX programming (not looks/scaling).
+                        </mark>
+                    </p>
+                    <br>
+                    <p>It was a project that I started during an internship and after the internship we were allowed to move on with the project.
+                        The newest update is a web integration for the game making it possible to run the game with the usual set up on web gl over two different browser tabs
+                        sharing communication in order to mirror each other where necessary.
+                        <a href="https://anerainteractive.de"> GAME </a>
+                   <br>
+                </li>
+                <!-- <li id="mushroom" class="projectItem project-item-collapsed">
                     <h2>Platforming Prototype</h2>        
                     <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'  onclick='expandProject("testGridExpand8", "mushroom")'>
                         <img src="img/Idle.png" alt="mushroomPic">
@@ -128,44 +178,7 @@
                     <p>This prototype of a mushroom platforming game is something I'm working on alone as a small side project. I hadn't worked on a platformer before so this was quite fun as an exercise.
                         I have some plans for other features I would like to add, but I have to see when I have time to do so.
                     </p>
-                </li>
-                <li id="transitiegame" class="projectItem project-item-collapsed">
-                    <h2>TransitieGame</h2>        
-                    <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'  onclick='expandProject("testGridExpand9", "transitiegame")'>
-                        <img src="img/tGame.png" alt="transitiegame">
-                        <img class="vidReplacement" src="img/tGame.png" alt="gamePicture">                      
-                        <p>MORE</p>
-                    </button>                   
-                    <div class="tag">
-                        <span class="progLang">
-                            C#
-                        </span>
-                        <span class="date">
-                            2023
-                        </span>
-                        <span class="misc">
-                            Serious Game Sustainbility
-                        </span>
-                        <span class="engine">
-                            Unity
-                        </span>
-                        <span class="time">
-                            1 year
-                        </span>
-                        <span class="team">
-                            1x artist, 1x designer, 1x programmer
-                        </span>
-                    </div>
-                </li>
-                <li class="fullwidth is-hidden" id="testGridExpand9">
-                    <p>The TransitieGame is a serious game that encourages cooperation in stakeholders on businessparks by allowing them to test Sustainbility measures in a safe environment.
-                    </p>
-                    <br>
-                    <p>It was a project that I started during an internship and after the internship we were allowed to move on with the project.
-                        The newest update is a web integration for the game 
-                        <a href="https://anerainteractive.de"> GAME </a>
-                   <br>
-                </li>
+                </li> -->
                 <li id="passthegas" class="projectItem project-item-collapsed">
                     <h2>PASS THE GAS</h2>        
                     <button class="projectMore moreModeOff" type="button" onmouseenter='toggleMoreMode(this)' onmouseleave='toggleMoreMode(this)'  onclick='expandProject("testGridExpand", "passthegas")'>
@@ -206,13 +219,13 @@
                     </p>
                     <br>
                     <p>It was a project I worked on with a group of 7 people during my minor abroad in Finland. 
-                        I was mainly responsible for the <mark>behaviour of the aliens</mark>, walking around and generating income,
-                         for everything that had to with the <mark>different buildings and their individual functions</mark> and the <mark>upgrade system</mark>.
-                          I also did work on <mark>integrating the UI</mark> into the game together with another developer 
+                        I was mainly responsible for the <mark>behaviour of the aliens</mark>, which were walking around, entering buildings and generating income.
+                        I also worked on everything that had to with the <mark>buildings and their individual functions</mark> and the <mark>upgrade system</mark>.
+                        I also did work on <mark>integrating the UI</mark> into the game together with another developer 
                         and took care of <mark>connecting the Main Island with the Space Expedition</mark>. Aside from that I did some <mark>basic events with firebase</mark> and helped where I could when smaller Issues happened elsewhere
-                    and took part in discussing gameplay changes, planning testing sessions and documenting the development progress.</p>
+                        as well as taking part in discussing gameplay changes, planning testing sessions and documenting the development progress.</p>
                    <br>
-                    <p>At this point Pass The Gas is released on Play Store and we are planning on continuing development the best we can next to our own projects/studies.</p>
+                    <p>At this point Pass The Gas is released on Play Store, but development on it has stopped due to some creative differences between team members.</p>
                     <!-- <a  class="button" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.LuckyLanternStudios.PasstheGas"> 
                        <i class="fa fa-google-play"></i>PASS THE GAS on Playstore
                     </a> -->
@@ -302,10 +315,11 @@
                         The task was to create a simplefied round-based combat game similar to pokemon with just C++ and the SFML library.
                         I had some pixel art that I had done quickly a while ago and just decided to make use of it for this assignment.</p>
                     <br>
-                    <p>The gameplay is pretty simple. You choose one of three characters and then you fight Voldemort(but uwu). You take alternating turns choosing
-                        an action every turn. You have options to Attack(doing damage), Recover(50% to recover HP), Prepare(take less damage next turn) or Cast Magic(do sanity damage).
-                        Voldemort(but uwu) will complete a random action every turn with a small chance to do nothing. All actions can be checked in the action log and 
-                        every time Voldemort(but uwu) dies, he reaches a new form and the player gains 100 points. When the Player dies, the score gets logged into teh highscore file.
+                    <p>The gameplay is pretty simple. You choose one of three characters and then you fight Voldemort(but uwu). You take <mark>alternating turns choosing
+                        an action</mark> every turn. You have options to <mark>Attack(doing damage), Recover(50% to recover HP), Prepare(take less damage next turn) or Cast Magic(do sanity damage)</mark>.
+                        <mark>Voldemort(but uwu) will complete a random action every turn with a small chance to do nothing</mark>. All actions can be checked in the <mark>action log</mark> and 
+                        every time Voldemort(but uwu) dies, he reaches a new form and the player gains 100 points. When the Player dies, the score gets saved as higshcore if it is good enough. 
+                        The higshcore list gets loaded again and persits between games.
                     </p>
                     <br>
                     <p>I had a lot of fun with this small project and especially working with C++ was nice. I hadn't done anything in C++ before
@@ -393,13 +407,18 @@
                     </div>
                 </li>
                 <li class="fullwidth is-hidden" id="testGridExpand5">
-                    <p>Zoo Adventure is a small application created to digitally imitate the experience of going to the Zoo for kids
-                        who cannot go outside because of the Corona Virus. This was a school project that I did all the programming for.
+                    <p>Zoo Adventure is quite a small application created to imitate the experience of going to the Zoo for kids
+                        who cannot go outside because of the Corona Virus. This was a school project that I did <mark>all the programming for</mark>.
                         </p>
                         <br>
                     <p>The kids can choose their avatar and walk with WASD/Arrow keys through the Zoo, watch the animals go about their day 
-                        and hear the characteristic sounds as well as click animals to pet them and drag the right food from their inventory
+                        and hear the characteristic sounds in proximity as well as click animals to pet them and drag the right food from their inventory
                         towards the animals in order to feed them.
+
+                        This was also coded using the GxpEngine created by some of my teachers. My biggest challenge back then was to <mark>create 
+                        a moving camera to follow the player character while keeping it within the borders of the zoo map.</mark>
+                        I couldn't figure it out properly and ended up moving the map instead and stopping the movement when the map would near offsets that I set as boundaries.
+                        It wasn't the best thing probably and I could do better now, but it worked out in the end.
                     </p>
                 </li>
                 <li id="deltastar" class="projectItem project-item-collapsed">
@@ -443,20 +462,21 @@
                 </li>
                 <li class="fullwidth is-hidden" id="testGridExpand6">
                     <p>Delta Star is an Arcade Game and it was one of the first games I ever got to work on.
-                        It is also to this day one of my favorites, because it was just such a fun project to do.
+                        I still think back to it with a lot of fondness, because it was such a fun project.
                     </p>
                     <br>
                     <img  src="img/deltastarController.jpg" alt="deltaStar">
                     <p>In the game you control a spaceship and must defeat various waves of aliens by dodging their attacks
-                        and shooting them with bullets and rockets. You can do a short teleport "warp" for a last inute escape
+                        and <mark>shooting them with bullets and rockets</mark>. You can do a <mark>short teleport</mark> "warp" for a last minute escape
                         from enemy bullets and when enemies die they have a chance to drop debuffs. These debuffs lower 
                         your speed, rocket/bullet cooldown or other stats by a percentage. After a while a boss will spawn and 
                         after defeating it all collected debuffs turn into buffs and the game starts anew with a strong boss to 
                         all enemie's stats. 
                     </p>
                     <br>
-                    <p>For this project I did <mark> the programming</mark> on my own in C# using an engine our teachers had created (Gxp Engine)
-                        and I <mark>painted the controller</mark> we had to built with acrylic paints (one of my hobbies).
+                    <p>For this project I did <mark> all of the programming</mark> on my own in C# using an engine our teachers had created (Gxp Engine)
+                        which already included some collision checks and basic classes to display and animate sprites.
+                        Additionally, I <mark>painted the controller</mark> (above) with acrylic paints (one of my hobbies).
                     </p>
                 </li>
                 <li id="pn" class="projectItem project-item-collapsed">
@@ -495,25 +515,15 @@
                     </div>
                 </li>
                 <li class="fullwidth is-hidden" id="testGridExpand7">
-                    <p>PN was the first 'proper' game I programmed that wasn't just a very rough ugly prototype.
-                      It was the firts group project after we'd had 2 months of coding classes, learning Processing.
-                      The task was to create a short point&click game and we were inspired by the horror demo P.T. (Playable Trailer)
-                    where (for those that don't know) you explore a hallway and everytime you leave a room things change around you.
-                    </p>
-                    <br>
                     <p>P.N. (Playable Nightmare) has 3(~4) different rooms. The player wakes up in a locked room with a big door
                         behind which they can hear someone else desperately asking to be let out. The player needs to try to find a door
-                        and a key to get past teh extensive security of this heavy door. As the player finds things and explores different areas
+                        and a key to get past the extensive security of this heavy door. As the player finds things and explores different areas
                         other past areas change and finally there is a spooky reveal at the end.
                     </p>
                     <br>
-                    <p>Looking back at this project, despite it having been a very stressful two weeks and remembering
-                        all the issues we had with organizing and working in this group dynamic of artists, designers and programmers for the first time,
-                        I still believe this was a very exiting project. I had so many doubts about choosing Programming as my specialization track
-                        in this study, because I just didn't know if I could do it, but programming every day from morning to evening and figuring out
-                        how to do all these things one by one, solving problems as they came up all on my own, it was just such a fun time and even if I got stuck
-                        I always managed to get 'unstuck' again. After this project I just knew I really really wanted to try, because of all the things to do in
-                        game development, making it all work was with code was magical. I was a wizard writing my own spells.
+                    <p>We made this game in a group of 5 from scratch using <mark>Processing 3</mark> and I did all the programming for it. The gameplay is pretty straightforward.
+                        It is a <mark>point & click</mark> game. The player can interact and pick up items as well as <mark>combine items with drag & drop</mark>.
+                        A <mark>dialogue system & changing facial expressions</mark> gives feedback to the player about how they are doing. 
                     </p>
                     
                 </li>
