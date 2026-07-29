@@ -1,0 +1,266 @@
+/* ___________________________________________________________________________________________________________________________________
+                                                           COLORS
+ _______________________________________________________________________________________________________________________________________*/
+
+:root {
+    --pink: #FFA585;
+    --red: #FF7847;
+    --blue: #6A71A0;
+    --blueSelected: #c4cceb;
+    --darkBlue: #2D3047;
+
+    --highlighted-text: var(--red);
+    --background-color: var(--paperWhite);
+    --background-accent: var(--newsBlue);
+    --secondBackground-color: var(--warmGrey);
+    --textColor: var(--eerieBlack);
+    --textColorLight: var(--paperWhite);
+
+    --purple: #890cd6;
+    --yellow: #e0bf00;
+    --green: #48b850;
+    --neonPink: #b654a9;
+    --strongRed: #ff1b1b;
+    --orange: #ff9933;
+    --lightBlue: #57c2ff;
+
+    --eerieBlack: #00131e;
+    --paperWhite: #f7dcc2;
+    --warmGrey: #5a656b;
+    --newsBlue: #35759b;
+
+    --teaGreen: #cae7b9;
+    --lightGold: #f3de8a;
+    --sweetSalmon: #eb9486;
+    --lavenderGrey: #7e7f9a;
+    --coldSteel: #97a7b3;
+}
+
+
+/* ___________________________________________________________________________________________________________________________________
+                                                           PROJECT
+ _______________________________________________________________________________________________________________________________________*/
+
+
+.all-projects-container {
+    display: flex;
+    flex-direction: column;
+    margin: 4vw;
+    /* padding: 40px 60px; */
+    background-color: var(--background-color);
+    color: var(--background-color);
+
+}
+
+.single-project-container {
+
+    background-color: var(--secondBackground-color);
+    padding: 40px 60px;
+    margin: 10px;
+}
+
+.project-body {
+    display: flex;
+}
+
+
+.project-LeftSide {
+    background-color: var(--secondBackground-color);
+}
+
+.project-RightSide {
+
+    background-color: var(--secondBackground-color);
+}
+
+.project-image {
+    width: 20vw;
+    margin: 10px 30px 0px 0px;
+    /*shorthand: top right bot left*/
+    object-fit: cover;
+}
+
+.project-video{
+    width: 20vw;
+    margin: 10px 30px 0px 0px;
+    /*shorthand: top right bot left*/
+    object-fit: cover;
+}
+
+.project-name {
+    font-family: 'Lucida Sans Unicode';
+
+}
+
+.project-RightSide p {
+    margin: 0;
+    font-family: 'Lucida Sans Unicode';
+    font-size: auto;
+    line-height: 30px;
+
+}
+
+
+.project-RightSide p mark {
+    font-weight: bold;
+    background: none;
+    color: var(--highlighted-text);
+}
+
+/* ___________________________________________________________________________________________________________________________________
+                                                           FILTERS
+ _______________________________________________________________________________________________________________________________________*/
+
+.filters label {
+    font-family: 'Lucida Sans Unicode';
+    font-size: 0.8vw;
+}
+
+.dropdown option,
+select {
+    font-family: 'Lucida Sans Unicode';
+    font-size: 0.8vw;
+}
+
+.dropdown {
+    background-color: var(--green);
+    color: var(--textColor);
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 0.3vw;
+    display: inline-block;
+}
+
+.filters select {
+    background-color: inherit;
+    border: none;
+}
+
+.filters div {
+    display: inline-block;
+}
+
+
+/* ___________________________________________________________________________________________________________________________________
+                                                           TAGS
+ _______________________________________________________________________________________________________________________________________*/
+
+.year {
+    background-color: var(--teaGreen);
+}
+
+.team-size {
+    background-color: var(--sweetSalmon);
+}
+
+.framework {
+    background-color: var(--lightGold);
+}
+
+.duration {
+    background-color: var(--lavenderGrey);
+}
+
+.platform {
+    background-color: var(--coldSteel);
+}
+
+.project-tags span.template{
+    display: none;
+    visibility: hidden;
+}
+
+.project-tags span {
+    color: var(--textColor);
+    padding: 8px 16px;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 0.3vw;
+    display: inline-block;
+}
+
+
+/* ___________________________________________________________________________________________________________________________________
+                                                            the header TABEA VAN HASZ 
+ _______________________________________________________________________________________________________________________________________*/
+header {
+
+    font-family: 'Anton', sans-serif;
+    background-color: var(--secondBackground-color);
+    font-size: 2vw;
+    color: var(--background-color);
+    margin: 0;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+header div {
+    right: 0px;
+    position: absolute;
+    margin-right: 15vw;
+    margin-top: 3.75vw;
+}
+
+.fa {
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    background: #FF7847;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-github {
+    background: black;
+    color: white;
+}
+
+.fa-instagram {
+    background: #C13584;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #0077B5;
+    color: white;
+}
+
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+
+/* ___________________________________________________________________________________________________________________________________
+                                                            INTRO
+ _______________________________________________________________________________________________________________________________________*/
+
+
+
+body {
+    background-color: var(--background-color);
+}
+
+body h2 {
+    font-family: 'Anton', sans-serif;
+    margin: 0px;
+    font-size: 60px;
+}

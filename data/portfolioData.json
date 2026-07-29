@@ -1,0 +1,125 @@
+[
+  {
+    "id": "transitiegame",
+    "name": "The Transitiegame",
+    "description": "The TransitieGame is a serious game that encourages cooperation in stakeholders on businessparks by allowing them to test Sustainbility measures in a safe environment. It is specifically created for entry workshops held by \"Transitiemakers\" (a Dutch business consulting company) targetting their customers (variety of business owners, electricity/water authorities, government workers). The game is divided into a presentation and admin version. After starting the admin version, you are able to stream the presentation version on a bigger screen to display the game for the partcipants of the workshop. Players seperate into teams and receive physical cards as resources. Using the guidance of a game master they are lead through a scenario and make decisions in a team and collaborating with other teams on how to solve different sustainability challenges a business park faces. One unique challenge in this project was to build a completely modular map in order to enable us to mimic real-world business parks. I worked with another developer on the technical side of this project and took the <mark>lead in organizing and managing</mark> our tasks.",
+    "vidUrl": "vid/transitieGame.mp4",
+    "imageUrls": [
+      "img/tGame.png",
+      "img/TGplaySession.jpg",
+      "img/finishedMap.jpg"
+    ],
+    "year": "2023",
+    "teamSize": "2-5 people",
+    "framework": "Unity C#",
+    "duration": "1 year+",
+    "platform": "PC"
+  },
+  {
+    "id": "deltastar",
+    "name": "Deltastar",
+    "description": "Delta Star is an Arcade Game and it was one of the first games I ever got to work on. I still think back to it with a lot of fondness, because it was such a fun project. In the game you control a spaceship and must defeat various waves of aliens by dodging their attacks and <mark>shooting them with bullets and rockets</mark>. You can do a <mark>short teleport</mark> \"warp\" for a last minute escape from enemy bullets and when enemies die they have a chance to drop debuffs. These debuffs lower your speed, rocket/bullet cooldown or other stats by a percentage. After a while a boss will spawn and after defeating it all collected debuffs turn into buffs and the game starts anew with a strong boss to all enemie's stats. For this project I did <mark> all of the programming</mark> on my own in C# using an engine our teachers had created which already included some collision checks and basic classes to display and animate sprites. Additionally, I <mark>painted the controller</mark> (above) with acrylic paints (one of my hobbies).",
+    "vidUrl": "vid/deltastar.mp4",
+    "imageUrls": [
+      "img/deltaStar.jpg",
+      "img/deltaStarController.jpg"
+    ],
+    "year": "2019",
+    "teamSize": "2-5 people",
+    "framework": "Unity C#",
+    "duration": "1-2 weeks",
+    "platform": "PC"
+  },
+  {
+    "id": "heavensfall",
+    "name": "Heavensfall",
+    "description": "Heavensfall is a short 2-4 player auto-aim shooter in which players must survive multiple waves of enemies together. Every enemy killed, awards XP and after certain milestones of XP gained, Players level up. A hidden objective of the game is to try to keep the levels of all players more or less even, since any player that kills disproportionally more enemies than their allies becomes corrupted by their deeds and must now be defeated by their former friends.",
+    "imageUrls": [
+      "img/Heavensfall.jpg"
+    ],
+    "year": "2022",
+    "teamSize": "6-10 people",
+    "framework": "Unity C#",
+    "duration": "1-3 months",
+    "platform": "PC"
+  },
+  {
+    "id": "lostCities",
+    "name": "Enschede Lost Chapters",
+    "description": "Enschede's Lost Chapter is a mobile App for and Augmented Reality Treasure Hunt in the city of Enschede. The users can explore the city and will receive audio feedback, when reaching a point of interest. By following the sound, they are able to find a variety of buildings in downtown Enschede and use the camera to see what the environment looked like many years ago as well as learn some interesting facts about what happened and who lived at these places. I worked on this project with a group of 5 people in Unity. I worked on the <mark>GPS integration with a custom map</mark> by researching and integrating the <mark>Mapbox SDK</mark> and implemented the audio feedback. It works by the user entering an area of interest which then triggers a sound relating to the corresponding building. Then the app changes the volume of the <mark>sound based on your distance to the actual building</mark>.",
+    "vidUrl": "vid/enschedeLostChapter.mp4",
+    "imageUrls": [
+      "img/gps.jpg"
+    ],
+    "year": "2021",
+    "teamSize": "2-5 people",
+    "framework": "Unity C#",
+    "duration": "6 weeks",
+    "platform": "PC"
+  },
+  {
+    "id": "pn",
+    "name": "Playable Nightmare",
+    "description": "P.N. (Playable Nightmare) has 3(~4) different rooms. The player wakes up in a locked room with a big door behind which they can hear someone else desperately asking to be let out. The player needs to try to find a door  and a key to get past the extensive security of this heavy door. As the player finds things and explores different areas  other past areas change and finally there is a spooky reveal at the end. We made this game in a group of 5 from scratch using <mark>Processing 3</mark> and I did all the programming for it. The gameplay is pretty straightforwar  It is a <mark>point & click</mark> game. The player can interact and pick up items as well as <mark>combine items with drag & drop</mark>. A <mark>dialogue system & changing facial expressions</mark> gives feedback to the player about how they are doing.",
+    "vidUrl":"vid/pnVideo.mp4",
+    "imageUrls": [
+      "img/PN.jpg"
+    ],
+    "year": "2019",
+    "teamSize": "2-5 people",
+    "framework": "Unity C#",
+    "duration": "1-2 weeks",
+    "platform": "PC"
+  },
+  {
+    "id": "passthegas",
+    "name": "Pass the Gas",
+    "description": "Pass The Gas is an mobile game and an Idle-Tycoon with the objective of building and managing your own Space Gas Station. The Player can build and upgrade structures and gather special resources in a small risk/reward game that we called \"Space Expeditions\". It was a project I worked on with a group of 7 people during my minor abroad in Finland. I was mainly responsible for the <mark>behaviour of the aliens</mark>, which were walking around, entering buildings and generating income.  I also worked on everything that had to with the <mark>buildings and their individual functions</mark> and the <mark>upgrade system</mark>. I also did work on <mark>integrating the UI</mark> into the game together with another developer and took care of <mark>connecting the Main Island with the Space Expedition</mark>. Aside from that I did some <mark>basic events with firebase</mark> and helped where I could when smaller Issues happened elsewhere as well as taking part in discussing gameplay changes, planning testing sessions and documenting the development progress.",
+    "vidUrl":"vid/passthegas.mp4",
+    "imageUrls": [
+      "img/spug.png"
+    ],
+    "year": "2022",
+    "teamSize": "6-10 people",
+    "framework": "Unity C#",
+    "duration": "6 months",
+    "platform": "PC"
+  },
+  {
+    "id": "graduation",
+    "name": "[under NDA] Graduation Project",
+    "description": "During my bachelor thesis, I developed modular editor tooling for a project currently in development. Due to an NDA, I can't share the project publicly, but I am able to discuss the problem and my developed solution in more detail upon request during an interview.",
+    "year": "2025",
+    "teamSize": "Solo",
+    "framework": "Unity C#",
+    "duration": "6 months",
+    "platform": "PC"
+  },
+  {
+    "id": "bubbleWrapFactory",
+    "name": "Bubble Wrap Factory",
+    "year": "2024",
+    "teamSize": "2-5 people",
+    "framework": "Unity C#",
+    "duration": "Game Jam (2-3 days)",
+    "platform": "PC"
+  },
+  {
+    "id": "fishfairy",
+    "name": "The Fish Fairy",
+    "year": "2023",
+    "teamSize": "Solo",
+    "framework": "Unity C#",
+    "duration": "Game Jam (2-3 days)",
+    "platform": "PC"
+  },
+  {
+    "id": "eatTheRich",
+    "name": "Eat the Rich",
+    "year": "2022",
+    "teamSize": "2-5 people",
+    "framework": "Unity C#",
+    "duration": "Game Jam (2-3 days)",
+    "platform": "PC"
+  }
+]
