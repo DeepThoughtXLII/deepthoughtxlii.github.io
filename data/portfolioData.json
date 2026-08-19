@@ -1,8 +1,18 @@
 [
   {
+    "id": "graduation",
+    "name": "[under NDA] Graduation Project",
+    "description": "During my bachelor thesis, I developed modular editor tooling for a project currently in development. Due to an NDA, I can't share the project publicly, but I am able to discuss the problem and my developed solution in more detail upon request during an interview.",
+    "year": "2025",
+    "teamSize": "1",
+    "framework": "Unity C#",
+    "duration": "6 months",
+    "platform": "PC"
+  },
+  {
     "id": "transitiegame",
     "name": "The Transitiegame",
-    "description": "The TransitieGame is a serious game that encourages cooperation in stakeholders on businessparks by allowing them to test Sustainbility measures in a safe environment. It is specifically created for entry workshops held by \"Transitiemakers\" (a Dutch business consulting company) targetting their customers (variety of business owners, electricity/water authorities, government workers). The game is divided into a presentation and admin version. After starting the admin version, you are able to stream the presentation version on a bigger screen to display the game for the partcipants of the workshop. Players seperate into teams and receive physical cards as resources. Using the guidance of a game master they are lead through a scenario and make decisions in a team and collaborating with other teams on how to solve different sustainability challenges a business park faces. One unique challenge in this project was to build a completely modular map in order to enable us to mimic real-world business parks. I worked with another developer on the technical side of this project and took the <mark>lead in organizing and managing</mark> our tasks.",
+"description": "<p>The TransitieGame is a serious game created for workshops by Transitiemakers, a Dutch sustainability consultancy. It encourages <mark>cooperation between stakeholders</mark> on business parks by letting participants explore sustainability measures in a safe environment. During a workshop, participants form teams representing different stakeholders, manage resources using physical cards and work together to solve challenges involving topics such as energy, water and infrastructure. The game consists of an admin interface used by the game master and a presentation view displayed to the participants.</p><br><p>I worked as one of two developers in a six-person interdisciplinary team and took the <mark>lead in planning and organizing the technical work</mark>. I implemented core parts of the game in Unity and C# and worked closely with the designers to turn the workshop concept into a usable digital application.</p><br><p>One of the project's technical challenges was allowing designers to recreate <mark>real-world business parks</mark> inside the game. Unity's existing tilemap tools did not fit our requirements, so I developed a <mark>custom map editor</mark> that allowed designers to create maps using configurable tile palettes, painting and erasing tools, tile rotation and multiple layers. The first version supported rectangular and isometric 2D tilemaps and was later extended to place 3D objects when the project transitioned from <mark>2D to 3D</mark>.</p><br><p>After the original project was delivered, I continued working on it for several months. Alongside the 3D conversion and various improvements, I implemented a <mark>browser integration using HTML, CSS and JavaScript</mark> around the Unity WebGL application. This allowed the admin and presentation sides to run in separate browser windows and communicate with their respective Unity instances.</p>",
     "vidUrl": "vid/transitieGame.mp4",
     "imageUrls": [
       "img/tGame.png",
@@ -10,31 +20,31 @@
       "img/finishedMap.jpg"
     ],
     "year": "2023",
-    "teamSize": "2-5 people",
+    "teamSize": "6",
     "framework": "Unity C#",
     "duration": "1 year+",
     "platform": "PC"
   },
   {
-    "id": "deltastar",
-    "name": "Deltastar",
-    "description": "Delta Star is an Arcade Game and it was one of the first games I ever got to work on. I still think back to it with a lot of fondness, because it was such a fun project. In the game you control a spaceship and must defeat various waves of aliens by dodging their attacks and <mark>shooting them with bullets and rockets</mark>. You can do a <mark>short teleport</mark> \"warp\" for a last minute escape from enemy bullets and when enemies die they have a chance to drop debuffs. These debuffs lower your speed, rocket/bullet cooldown or other stats by a percentage. After a while a boss will spawn and after defeating it all collected debuffs turn into buffs and the game starts anew with a strong boss to all enemie's stats. For this project I did <mark> all of the programming</mark> on my own in C# using an engine our teachers had created which already included some collision checks and basic classes to display and animate sprites. Additionally, I <mark>painted the controller</mark> (above) with acrylic paints (one of my hobbies).",
-    "vidUrl": "vid/deltastar.mp4",
+    "id": "passthegas",
+    "name": "Pass the Gas",
+"description": "<p>Pass the Gas is a <mark>mobile idle tycoon game</mark> about building and managing a gas station in space. Players expand their station by constructing and upgrading buildings, manage different resources and earn additional rewards through \"Space Expeditions\", a small risk/reward minigame. The project was developed by a team of eight during my minor abroad in Finland.</p><br><p>My main responsibility was designing and implementing the game's <mark>core resource-management systems</mark>. I worked on the buildings and their individual functions, the resources they produced and consumed, and the <mark>upgrade systems</mark> that allowed the player to expand and improve their station. Since most of the game's progression was tied to buildings, resources and the aliens using them, this covered a large part of the main gameplay loop.</p><br><p>I also developed the <mark>alien behaviour</mark> used throughout the station. Aliens moved between buildings, entered and interacted with them and generated income as part of the idle gameplay. Alongside this, I programmed movement and <mark>animation behaviour</mark> for elements such as arriving and departing spaceships, including acceleration, deceleration and transitions between different animation states.</p><br><p>I worked on integrating the game's animations and UI with the underlying systems and helped other team members with the <mark>animation integration workflow</mark>. I also connected the main station with the separate Space Expedition gameplay section and implemented some basic analytics events using Firebase.</p><br><p>Beyond my main responsibilities, I helped resolve smaller issues across the project and participated in gameplay discussions, playtesting, development planning and documentation throughout production.</p>",    
+"vidUrl": "vid/passthegas.mp4",
     "imageUrls": [
-      "img/deltaStar.jpg",
-      "img/deltaStarController.jpg"
+      "img/spug.png"
     ],
-    "year": "2019",
-    "teamSize": "2-5 people",
+    "year": "2022",
+    "teamSize": "6-10 people",
     "framework": "Unity C#",
-    "duration": "1-2 weeks",
+    "duration": "6 months",
     "platform": "PC"
   },
-  {
+   {
     "id": "heavensfall",
     "name": "Heavensfall",
-    "description": "Heavensfall is a short 2-4 player auto-aim shooter in which players must survive multiple waves of enemies together. Every enemy killed, awards XP and after certain milestones of XP gained, Players level up. A hidden objective of the game is to try to keep the levels of all players more or less even, since any player that kills disproportionally more enemies than their allies becomes corrupted by their deeds and must now be defeated by their former friends.",
-    "imageUrls": [
+"description": "<p>Heavensfall is a short <mark>2–4 player multiplayer auto-aim shooter</mark> in which players fight through several waves of enemies together. Instead of traditional controllers, players connect their phones directly to the running game through <mark>WebSockets</mark> and use them as local controllers.</p><br><p>Enemies award XP when defeated, allowing players to level up throughout a match. The game tracks how evenly kills and levels are distributed across the team. If one player becomes significantly stronger than the others, they become <mark>corrupted</mark> during the final wave and turn into the boss that the remaining players must defeat. If the team remains relatively balanced, the players instead fight an AI-controlled final boss together.</p><br><p>I worked primarily on the project's <mark>networking and core gameplay systems</mark>. The Unity application hosted a WebSocket server using a library provided by our professor, while I handled the game-side networking logic around it. This included <mark>managing clients and connections</mark>, reconnection handling, polling, and serializing and deserializing packets exchanged between the players' phones and the game. I also worked with another student on the <mark>JavaScript WebSocket client</mark> used by the phone controllers, while they primarily handled the HTML and CSS of the interface.</p><br><p>Beyond the networking, I implemented large parts of the game's <mark>core combat and progression systems</mark>, including the player perspective and shooting behaviour, enemy combat, wave gameplay and the systems surrounding XP and level progression. I also worked on movement and animation behaviour used during combat.</p>",
+   "vidUrl": "vid/heavensfall.mp4",
+"imageUrls": [
       "img/Heavensfall.jpg"
     ],
     "year": "2022",
@@ -46,7 +56,7 @@
   {
     "id": "lostCities",
     "name": "Enschede Lost Chapters",
-    "description": "Enschede's Lost Chapter is a mobile App for and Augmented Reality Treasure Hunt in the city of Enschede. The users can explore the city and will receive audio feedback, when reaching a point of interest. By following the sound, they are able to find a variety of buildings in downtown Enschede and use the camera to see what the environment looked like many years ago as well as learn some interesting facts about what happened and who lived at these places. I worked on this project with a group of 5 people in Unity. I worked on the <mark>GPS integration with a custom map</mark> by researching and integrating the <mark>Mapbox SDK</mark> and implemented the audio feedback. It works by the user entering an area of interest which then triggers a sound relating to the corresponding building. Then the app changes the volume of the <mark>sound based on your distance to the actual building</mark>.",
+"description": "<p>Enschede's Lost Chapter is a <mark>mobile augmented reality treasure hunt</mark> through the city of Enschede. The project used historical archive material to reconstruct buildings and parts of the city as they appeared before a major fire many years ago. Players explore the city, follow location-based clues and use their phone camera to view reconstructed versions of historical buildings overlaid onto their present-day surroundings.</p><br><p>The experience was designed around discovering different points of interest throughout the city. When players approached one of these locations, the app provided <mark>audio clues</mark> connected to the building they were searching for. For example, approaching a historic clock tower would trigger the sound of bells, which became progressively louder as the player moved closer to the location.</p><br><p>I worked on the project in a team of five using Unity and was primarily responsible for the <mark>GPS-based location and audio system</mark>. I researched and integrated the <mark>Mapbox SDK</mark> to work with the phone's GPS data and determine the player's distance from nearby points of interest. Based on that distance, the system detected when the player entered a location's range and dynamically adjusted the volume of its associated audio clue, allowing the sound itself to guide the player towards the destination.</p>",
     "vidUrl": "vid/enschedeLostChapter.mp4",
     "imageUrls": [
       "img/gps.jpg"
@@ -58,68 +68,36 @@
     "platform": "PC"
   },
   {
+    "id": "deltastar",
+    "name": "Deltastar",
+"description": "<p>Delta Star is an <mark>arcade space shooter</mark> and one of the first games I ever worked on. It was developed in two weeks by a team of six: three designers, two artists and myself as the sole programmer. Players control a spaceship, dodge different enemy bullet patterns and fight through increasingly difficult waves using regular shots, missiles and a short-distance <mark>warp</mark> that can be used to escape incoming attacks.</p><br><p>Defeated enemies can drop temporary <mark>debuffs</mark> that reduce stats such as movement speed, firing speed, lives, missile availability or damage. After several waves, the player faces a boss. Defeating it turns all collected debuffs into buffs and restarts the game from the first wave with stronger enemies. This creates an endless cycle where surviving disadvantages early on can make the player significantly stronger in later rounds.</p><br><p>I did <mark>all of the programming</mark> for the project in C#. Instead of Unity, we used a lightweight engine created by one of our professors. It provided basic functionality for displaying sprites, playing animations and detecting collisions, while the game's actual systems and behaviour were implemented directly in code. I programmed the player controls and warp mechanic, shooting and missiles, enemy and boss behaviour, bullet patterns, collisions, waves, debuffs and buffs, and the overall game loop.</p><br><p>The game was also built around a custom physical arcade controller created by members of the team. While I was not involved in building the controller itself, I <mark>painted it by hand with acrylic paints</mark> at the end of the project.</p>",
+    "vidUrl": "vid/deltastar.mp4",
+    "imageUrls": [
+      "img/deltaStar.jpg",
+      "img/deltaStarController.jpg"
+    ],
+    "year": "2019",
+    "teamSize": "2-5 people",
+    "framework": "C#",
+    "duration": "1-2 weeks",
+    "platform": "PC"
+  },
+  
+ 
+  {
     "id": "pn",
     "name": "Playable Nightmare",
-    "description": "P.N. (Playable Nightmare) has 3(~4) different rooms. The player wakes up in a locked room with a big door behind which they can hear someone else desperately asking to be let out. The player needs to try to find a door  and a key to get past the extensive security of this heavy door. As the player finds things and explores different areas  other past areas change and finally there is a spooky reveal at the end. We made this game in a group of 5 from scratch using <mark>Processing 3</mark> and I did all the programming for it. The gameplay is pretty straightforwar  It is a <mark>point & click</mark> game. The player can interact and pick up items as well as <mark>combine items with drag & drop</mark>. A <mark>dialogue system & changing facial expressions</mark> gives feedback to the player about how they are doing.",
-    "vidUrl":"vid/pnVideo.mp4",
+    "description": "<p>P.N. (Playable Nightmare) is a short <mark>point & click horror game</mark> and the first game project I ever worked on. The player wakes up without any memories inside a small three-room prison and must find a way to escape. Behind a large locked door, another trapped person can be heard asking for help. As the player progresses through the puzzles, previously visited rooms begin to change in subtle ways, gradually revealing that something is very wrong.</p><br><p>The game revolves around exploring the environment, collecting items and figuring out how they can be used to solve puzzles. Players can <mark>pick up, drag and combine items</mark>, interact with objects throughout the rooms and progress through a large amount of dialogue and several cutscenes. The dialogue presentation also included animated character portraits and changing facial expressions to support the story and give feedback to the player.</p><br><p>The project was created by a team of five using <mark>Processing 3</mark>, with me as the <mark>sole programmer</mark>. Since we were not using an engine such as Unity, I implemented the game's interaction systems directly in code, including point-and-click navigation, object interactions, the inventory and drag & drop item-combination system, dialogue, cutscenes, puzzle progression and the changing room states used for the horror elements.</p><br><p>The game ends with the reveal that the person behind the locked door is connected to the player in a much more personal way than they initially believed, bringing the environmental changes and earlier dialogue together for the final twist.</p>",
+    "vidUrl": "vid/pnVideo.mp4",
     "imageUrls": [
       "img/PN.jpg"
     ],
     "year": "2019",
     "teamSize": "2-5 people",
-    "framework": "Unity C#",
+    "framework": "Processing 3",
     "duration": "1-2 weeks",
-    "platform": "PC"
-  },
-  {
-    "id": "passthegas",
-    "name": "Pass the Gas",
-    "description": "Pass The Gas is an mobile game and an Idle-Tycoon with the objective of building and managing your own Space Gas Station. The Player can build and upgrade structures and gather special resources in a small risk/reward game that we called \"Space Expeditions\". It was a project I worked on with a group of 7 people during my minor abroad in Finland. I was mainly responsible for the <mark>behaviour of the aliens</mark>, which were walking around, entering buildings and generating income.  I also worked on everything that had to with the <mark>buildings and their individual functions</mark> and the <mark>upgrade system</mark>. I also did work on <mark>integrating the UI</mark> into the game together with another developer and took care of <mark>connecting the Main Island with the Space Expedition</mark>. Aside from that I did some <mark>basic events with firebase</mark> and helped where I could when smaller Issues happened elsewhere as well as taking part in discussing gameplay changes, planning testing sessions and documenting the development progress.",
-    "vidUrl":"vid/passthegas.mp4",
-    "imageUrls": [
-      "img/spug.png"
-    ],
-    "year": "2022",
-    "teamSize": "6-10 people",
-    "framework": "Unity C#",
-    "duration": "6 months",
-    "platform": "PC"
-  },
-  {
-    "id": "graduation",
-    "name": "[under NDA] Graduation Project",
-    "description": "During my bachelor thesis, I developed modular editor tooling for a project currently in development. Due to an NDA, I can't share the project publicly, but I am able to discuss the problem and my developed solution in more detail upon request during an interview.",
-    "year": "2025",
-    "teamSize": "Solo",
-    "framework": "Unity C#",
-    "duration": "6 months",
-    "platform": "PC"
-  },
-  {
-    "id": "bubbleWrapFactory",
-    "name": "Bubble Wrap Factory",
-    "year": "2024",
-    "teamSize": "2-5 people",
-    "framework": "Unity C#",
-    "duration": "Game Jam (2-3 days)",
-    "platform": "PC"
-  },
-  {
-    "id": "fishfairy",
-    "name": "The Fish Fairy",
-    "year": "2023",
-    "teamSize": "Solo",
-    "framework": "Unity C#",
-    "duration": "Game Jam (2-3 days)",
-    "platform": "PC"
-  },
-  {
-    "id": "eatTheRich",
-    "name": "Eat the Rich",
-    "year": "2022",
-    "teamSize": "2-5 people",
-    "framework": "Unity C#",
-    "duration": "Game Jam (2-3 days)",
     "platform": "PC"
   }
 ]
+
+

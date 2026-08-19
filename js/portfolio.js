@@ -52,7 +52,7 @@ function renderProjects(projects) {
             vidElement.autoplay = true;
             vidElement.muted = true;
             vidElement.loop = true;
-            vidElement.playbackRate = 2;
+            vidElement.playbackRate = 1.5;
             vidElement.classList.add("project-video");
             vidParent.appendChild(vidElement);
         }
