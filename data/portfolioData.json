@@ -4,7 +4,7 @@
     "name": "[under NDA] Graduation Project",
     "description": "During my bachelor thesis, I developed modular editor tooling for a project currently in development. Due to an NDA, I can't share the project publicly, but I am able to discuss the problem and my developed solution in more detail upon request during an interview.",
     "year": "2025",
-    "teamSize": "1",
+    "teamSize": "Solo",
     "framework": "Unity C#",
     "duration": "6 months",
     "platform": "PC"
@@ -20,7 +20,7 @@
       "img/finishedMap.jpg"
     ],
     "year": "2023",
-    "teamSize": "6",
+    "teamSize": "6-10 people",
     "framework": "Unity C#",
     "duration": "1 year+",
     "platform": "PC"
@@ -74,7 +74,7 @@
     "vidUrl": "vid/deltastar.mp4",
     "imageUrls": [
       "img/deltaStar.jpg",
-      "img/deltaStarController.jpg"
+      "img/deltastarController.jpg"
     ],
     "year": "2019",
     "teamSize": "2-5 people",
